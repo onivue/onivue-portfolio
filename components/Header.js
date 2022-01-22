@@ -98,14 +98,13 @@ export const Header = () => {
     return (
         <div
             className={clsx(
-                'fixed z-20 w-full opacity-90  transition-top duration-300 ',
-                'bg-gradient-to-r from-green-400 to-cyan-500',
-                'dark:bg-gradient-to-r dark:from-blue-600  dark:to-blue-400',
-                visible ? 'top-0' : '-top-28',
+                'fixed z-20 w-full opacity-90 transition-top duration-300 ',
+                'backdrop-filter backdrop-blur-sm  bg-opacity-80 dark:bg-opacity-100 border-b-4 border-amber-400',
+                visible ? 'top-0' : '-top-[5rem]',
             )}
         >
             <Container>
-                <div className="flex items-center justify-between w-auto py-5 md:py-9 text-black-900 dark:text-white-900">
+                <div className="flex items-center justify-between w-auto py-4 text-black-900 dark:text-white-900">
                     <Link href="/">
                         <a href="/">
                             <div className="w-24 fill-current md:w-28 dark:text-white-900 text-black-900">

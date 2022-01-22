@@ -5,10 +5,13 @@ import { CitationOverlay } from '@/components/CitationOverlay'
 import { Header } from '@/components/Header'
 import { Container } from '@/components/Container'
 import { Hero } from '@/components/Hero'
+import { Projects } from '@/components/Projects'
+import { Skills } from '@/components/Skills'
+import Footer from '@/components/Footer'
 
 export default function Home() {
     const [citation, setCitation] = useState(true)
-    const [main, setMain] = useState(false)
+    const [main, setMain] = useState(true)
 
     useEffect(() => {
         const ids = [
@@ -25,7 +28,7 @@ export default function Home() {
                 <title>Create Next App</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <CitationOverlay citation={citation} />
+            {/* <CitationOverlay citation={citation} /> */}
             {main && (
                 <motion.div
                     variants={{
@@ -47,8 +50,10 @@ export default function Home() {
                     <Header />
                     <Container>
                         <Hero />
-                        <div className="h-[2000px] bg-indigo-100"></div>
+                        <Projects />
+                        <Skills />
                     </Container>
+                    <Footer />
                 </motion.div>
             )}
         </>
