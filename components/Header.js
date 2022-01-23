@@ -60,25 +60,28 @@ export const Header = () => {
         <div
             className={clsx(
                 'fixed z-20 w-full opacity-90 transition-top duration-300 ',
-                'backdrop-filter backdrop-blur-sm  bg-opacity-80 dark:bg-opacity-100 border-b-4 border-amber-400',
-                visible ? 'top-0' : '-top-[5rem]',
+                'backdrop-filter backdrop-blur-sm  bg-opacity-80 dark:bg-opacity-100  border-amber-200 border-opacity-0',
+                visible ? 'top-0' : '-top-[5rem] border-amber-200 border-b-8 border-opacity-100',
             )}
         >
             <Container>
                 <div className="flex items-center justify-between w-auto py-4 ">
                     <Link href="/">
                         <a href="/">
-                            <div className="w-24 fill-current md:w-28 ">
-                                <LogoIcon
-                                    className="w-10 h-10 filter drop-shadow-md drop-s"
-                                    onClick={null}
-                                />
+                            <div className="flex">
+                                <div className="p-2 rounded-full fill-current dark:bg-white">
+                                    <LogoIcon
+                                        className="w-8 h-8 filter drop-shadow-md drop-s"
+                                        onClick={null}
+                                    />
+                                </div>
+                                <div className="self-center ml-4">onivue</div>
                             </div>
                         </a>
                     </Link>
                     <div className="flex items-center">
                         <button
-                            className="items-center justify-center w-12 h-12 rounded-md dark:bg-gray-900 focus:outline-none focus:ring-2 ring-amber-400 d-flex"
+                            className="items-center justify-center w-12 h-12 rounded-md dark:bg-gray-900 focus:outline-none focus:ring-2 ring-amber-200 d-flex"
                             onClick={toggleTheme}
                         >
                             {mounted ? (

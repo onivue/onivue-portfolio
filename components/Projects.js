@@ -81,7 +81,7 @@ export const ProjectCard = ({ title, text, github, externalLink, tags, privateCo
                     tags.map((tag, index) => (
                         <label
                             key={index}
-                            className="inline-block px-3 py-1 mb-2 mr-2 text-xs font-semibold rounded-lg text-amber-600 bg-amber-100"
+                            className="inline-block px-3 py-1 mb-2 mr-2 text-xs font-semibold rounded-lg text-amber-800 bg-amber-100"
                         >
                             {tag}
                         </label>
