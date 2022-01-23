@@ -9,7 +9,7 @@ export const Hero = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 ">
                 <div>
                     <div className="flex items-center">
-                        <h1 className="mb-6 text-lg font-bold text-black-900 dark:text-white-900">
+                        <h1 className="mb-1 text-lg font-bold text-black-900 dark:text-white">
                             Hey! I'm Albin 👋
                         </h1>
                     </div>
@@ -22,7 +22,7 @@ export const Hero = () => {
                 <motion.img
                     src="/images/me.jpg"
                     alt="me"
-                    className="self-center object-cover w-40 h-40 row-start-1 mx-auto border border-gray-700 rounded-full md:row-start-auto md:w-40 md:h-40"
+                    className="self-center object-cover w-40 h-40 row-start-1 mx-auto rounded-full shadow-lg md:row-start-auto md:w-40 md:h-40 ring-4 ring-amber-200"
                     variants={{
                         hidden: {
                             scale: 0,
@@ -73,13 +73,13 @@ export const HeroLink = ({ title, href }) => {
         <motion.a
             href={href}
             target="_blank"
-            className="relative text-blue-700"
+            className="relative text-amber-400"
             whileHover="visible"
             initial="hidden"
         >
             @{title}
             <motion.span
-                className="absolute bottom-0 left-0 w-full bg-blue-700 h-0.5"
+                className="absolute bottom-0 left-0 w-full bg-amber-300 h-0.5"
                 variants={{
                     hidden: {
                         opacity: 0,

@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion'
 import { FaGithub, FaLinkedin, FaTelegram, FaTwitter } from 'react-icons/fa'
 import { MediaIcon } from '@/components/MediaIcon'
 import { Container } from '@/components/Container'
@@ -21,8 +20,8 @@ const iconStyle = 'w-16 h-16 text-amber-200'
 export const Skills = () => {
     return (
         <Container className="mb-14">
-            <h2 className="mb-4 text-2xl font-bold dark:text-white-900 text-black-900">Skills</h2>
-            <p className="text-base md:text-xl dark:text-white-700 text-black-700">
+            <h2 className="mb-4 text-2xl font-bold dark:text-white text-black-900">Skills</h2>
+            <p className="text-base md:text-xl dark:text-white text-black-700">
                 The use of the latest technologies is important to me. These are the tools I am most
                 familiar with.
             </p>
@@ -93,7 +92,7 @@ export const ProjectCard = ({ title, text, externalLink, icon }) => {
             <h2 className="mb-2 text-lg font-bold">{title}</h2>
             <p>{text}</p>
 
-            <MediaIcon icon={icon} href={''} className="" />
+            <MediaIcon icon={icon} href={null} className="" />
         </div>
     )
 }

@@ -48,11 +48,11 @@ export default function Home() {
                     }}
                 >
                     <Header />
-                    <Container>
-                        <Hero />
-                        <Projects />
-                        <Skills />
-                    </Container>
+
+                    <Hero />
+                    <Projects />
+                    <Skills />
+                    <Container></Container>
                     <Footer />
                 </motion.div>
             )}

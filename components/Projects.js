@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion'
 import { FaGithub, FaLinkedin, FaTelegram, FaTwitter } from 'react-icons/fa'
 import { MediaIcon } from '@/components/MediaIcon'
 import { Container } from '@/components/Container'
@@ -7,8 +6,8 @@ import { HiExternalLink, HiLockClosed } from 'react-icons/hi'
 export const Projects = () => {
     return (
         <Container className="mb-14">
-            <h2 className="mb-4 text-2xl font-bold dark:text-white-900 text-black-900">Projects</h2>
-            <p className="text-base md:text-xl dark:text-white-700 text-black-700">
+            <h2 className="mb-4 text-2xl font-bold dark:text-white text-black-900">Projects</h2>
+            <p className="text-base md:text-xl dark:text-white text-black-700">
                 Here are some of my most favourite projects that I enjoyed coding and designing from
                 scratch.
             </p>
@@ -31,23 +30,19 @@ export const Projects = () => {
                 <ProjectCard
                     title="onivue-numerus"
                     text="Web counter app for fun game nights."
-                    github="https://github.com/onivue/onivue-numers"
+                    github="https://github.com/onivue/onivue-numerus"
                     externalLink="https://github.com/onivue/onivue-numerus"
                     tags={['react', 'next.js', 'tailwindcss', 'zustand.js', 'headless-ui']}
                 />
                 <ProjectCard
                     title="sscit-visierung"
                     text="Documents sighting workflow based on SharePoint libraries."
-                    github="https://github.com/onivue/onivue-numers"
-                    externalLink="https://github.com/onivue/onivue-numerus"
                     tags={['javascript', 'css', 'powershell']}
                     privateCode={true}
                 />
                 <ProjectCard
                     title="sscit-employee-introduction"
                     text="Add and manage work items for new Employees, based on SharePoint lists."
-                    github="https://github.com/onivue/onivue-numers"
-                    externalLink="https://github.com/onivue/onivue-numerus"
                     tags={['react', 'pnpjs', 'css']}
                     privateCode={true}
                 />
@@ -55,24 +50,18 @@ export const Projects = () => {
                     title="sscit-tip-mip"
                     text="Generate medication information document for tumor therapy patients, dynamically generated based on selected mediciations.
                     Word file can be generated directly in the browser."
-                    github="https://github.com/onivue/onivue-numers"
-                    externalLink="https://github.com/onivue/onivue-numerus"
                     tags={['javascript', 'css', 'docxtemplater', 'microsoft word']}
                     privateCode={true}
                 />
                 <ProjectCard
                     title="sscit-word-template-changer"
                     text="PowerShell Script to bulk change layout on existing documents, like header, footer and page margins."
-                    github="https://github.com/onivue/onivue-numers"
-                    externalLink="https://github.com/onivue/onivue-numerus"
                     tags={['powershell', 'microsoft word']}
                     privateCode={true}
                 />
                 <ProjectCard
                     title="sscit-wiki"
                     text="Document control workflow, based on SharePoint Libraries."
-                    github="https://github.com/onivue/onivue-numers"
-                    externalLink="https://github.com/onivue/onivue-numerus"
                     tags={['powershell']}
                     privateCode={true}
                 />
@@ -104,11 +93,11 @@ export const ProjectCard = ({ title, text, github, externalLink, tags, privateCo
                     <div className="flex group">
                         <MediaIcon
                             icon={<HiLockClosed className="w-6 h-6 text-red-300 md:w-7 md:h-7" />}
-                            href={github}
+                            href={null}
                             className="mr-4"
                         />
                         <p className="self-center text-xs transition duration-300 opacity-0 group-hover:opacity-100">
-                            Sorry, this Project ist private.
+                            Sorry, this project ist private.
                         </p>
                     </div>
                 ) : (
