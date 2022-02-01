@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import LogoIcon from './LogoIcon'
 
 const textVariants = {
     initial: {
@@ -29,19 +30,17 @@ export const CitationOverlay = ({ citation }) => {
             initial="initial"
             animate={citation ? 'initial' : 'invisible'}
         >
-            <div>
+            <div className="flex flex-col items-center justify-center">
                 <motion.div
                     variants={textVariants}
                     initial="initial"
                     animate="visible"
                     transition={{
-                        delay: 3.0,
-                        duration: 1.2,
+                        delay: 1.2,
+                        duration: 1,
                     }}
                 >
-                    <div className="w-10 mb-2 fill-current md:ml-auto dark:text-white text-black-900">
-                        X
-                    </div>
+                    <LogoIcon className="w-12 h-12" />
                 </motion.div>
                 <motion.p
                     className="mt-4 mb-2 text-xl font-medium leading-none md:text-2xl dark:text-white text-black-900 md:my-0"
@@ -49,8 +48,8 @@ export const CitationOverlay = ({ citation }) => {
                     initial="initial"
                     animate="visible"
                     transition={{
-                        delay: 1.0,
-                        duration: 1.2,
+                        delay: 0.3,
+                        duration: 1,
                     }}
                 >
                     onivue
@@ -61,8 +60,8 @@ export const CitationOverlay = ({ citation }) => {
                     animate="visible"
                     variants={textVariants}
                     transition={{
-                        delay: 2.0,
-                        duration: 1.2,
+                        delay: 0.9,
+                        duration: 1,
                     }}
                 >
                     Albin Hoti

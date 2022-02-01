@@ -1,20 +1,19 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 
-const APP_NAME = 'onivue.'
-const APP_DESCRIPTION = 'Development Area of onivue'
+const APP_NAME = 'onivue'
+const APP_DESCRIPTION = 'Potfolio'
 
 class MyDocument extends Document {
     render() {
         return (
             <Html>
                 <Head>
-                    {/* <meta name="apple-mobile-web-app-title" content={APP_NAME} />
+                    <meta name="apple-mobile-web-app-title" content={APP_NAME} />
+                    <meta name="application-name" content={APP_NAME} />
                     <meta name="description" content={APP_DESCRIPTION} />
-                    <meta name="apple-mobile-web-app-title" content="onivue." />
-                    <meta name="application-name" content="onivue." />
-                    <meta name="theme-color" content="#a3e635" />
+                    <meta name="theme-color" content="#f9e288" />
                     <meta charSet="utf-8" />
-                    <link rel="manifest" href="/manifest.json" />
+                    {/* <link rel="manifest" href="/manifest.json" />
                     <link
                         rel="apple-touch-icon"
                         sizes="180x180"
@@ -33,6 +32,7 @@ class MyDocument extends Document {
                         href="/icons/favicon-16x16.png"
                     />
                     <link rel="shortcut icon" href="/icons/favicon.ico" /> */}
+                    <link rel="icon" href="/favicon.ico" />
                 </Head>
 
                 <body className="antialiased transition-colors duration-300 bg-lightTheme dark:bg-darkTheme selection:bg-amber-300">

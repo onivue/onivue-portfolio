@@ -11,12 +11,12 @@ import Footer from '@/components/Footer'
 
 export default function Home() {
     const [citation, setCitation] = useState(true)
-    const [main, setMain] = useState(true)
+    const [main, setMain] = useState(false)
 
     useEffect(() => {
         const ids = [
-            setTimeout(() => setCitation(false), 4800),
-            setTimeout(() => setMain(true), 5700),
+            setTimeout(() => setCitation(false), 1900),
+            setTimeout(() => setMain(true), 2100),
         ]
 
         return () => ids.forEach((id) => clearTimeout(id))
@@ -24,11 +24,7 @@ export default function Home() {
 
     return (
         <>
-            <Head>
-                <title>Create Next App</title>
-                <link rel="icon" href="/favicon.ico" />
-            </Head>
-            {/* <CitationOverlay citation={citation} /> */}
+            <CitationOverlay citation={citation} />
             {main && (
                 <motion.div
                     variants={{
