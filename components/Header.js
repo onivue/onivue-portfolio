@@ -1,7 +1,7 @@
 import clsx from 'clsx'
 import Link from 'next/link'
 import { useTheme } from 'next-themes'
-import React, { useCallback, useEffect, useRef, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import { HiMoon, HiSun } from 'react-icons/hi'
 import { Container } from '@/components/Container'
 import LogoIcon from './LogoIcon'
@@ -59,7 +59,7 @@ export const Header = () => {
     return (
         <div
             className={clsx(
-                'fixed z-20 w-full opacity-90 transition-top duration-300 ',
+                'fixed z-20 w-full opacity-90  duration-300 ',
                 'backdrop-filter backdrop-blur-sm  bg-opacity-80 dark:bg-opacity-100  border-amber-200 border-opacity-0',
                 visible ? 'top-0' : '-top-[5rem] border-amber-200 border-b-8 border-opacity-100',
             )}

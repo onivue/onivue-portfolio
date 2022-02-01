@@ -49,7 +49,7 @@ export const Skills = () => {
                     externalLink=""
                 />
                 <ProjectCard
-                    title="Firebase"
+                    title="Next.js"
                     text=""
                     icon={<SiNextdotjs className={iconStyle} />}
                     externalLink=""

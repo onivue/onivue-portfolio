@@ -1,10 +1,11 @@
 const colors = require('tailwindcss/colors')
-
+const animations = require('./tailwind/animations')
 module.exports = {
     content: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
     darkMode: 'class', // or 'media' or 'class'
     theme: {
         extend: {
+            ...animations,
             colors: {
                 darkTheme: '#171a23',
                 lightTheme: '#ffffff',
@@ -24,5 +25,8 @@ module.exports = {
     variants: {
         extend: {},
     },
-    plugins: [],
+    plugins: [
+        require('@tailwindcss/forms'),
+        // ...
+    ],
 }
