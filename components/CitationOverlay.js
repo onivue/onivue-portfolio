@@ -36,11 +36,13 @@ export const CitationOverlay = ({ citation }) => {
                     initial="initial"
                     animate="visible"
                     transition={{
-                        delay: 1.2,
-                        duration: 1,
+                        delay: 0.3,
+                        duration: 2,
                     }}
                 >
-                    <LogoIcon className="w-12 h-12" />
+                    <div className="p-2 rounded-full fill-current dark:bg-white">
+                        <LogoIcon className="w-12 h-12" />
+                    </div>
                 </motion.div>
                 <motion.p
                     className="mt-4 mb-2 text-xl font-medium leading-none md:text-2xl dark:text-white text-black-900 md:my-0"
@@ -48,8 +50,8 @@ export const CitationOverlay = ({ citation }) => {
                     initial="initial"
                     animate="visible"
                     transition={{
-                        delay: 0.3,
-                        duration: 1,
+                        delay: 0.9,
+                        duration: 2,
                     }}
                 >
                     onivue
@@ -60,8 +62,8 @@ export const CitationOverlay = ({ citation }) => {
                     animate="visible"
                     variants={textVariants}
                     transition={{
-                        delay: 0.9,
-                        duration: 1,
+                        delay: 1.0,
+                        duration: 2,
                     }}
                 >
                     Albin Hoti

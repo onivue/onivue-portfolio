@@ -13,8 +13,8 @@ export default function Home() {
 
     useEffect(() => {
         const ids = [
-            setTimeout(() => setCitation(false), 1900),
-            setTimeout(() => setMain(true), 2600),
+            setTimeout(() => setCitation(false), 2100),
+            setTimeout(() => setMain(true), 2900),
         ]
 
         return () => ids.forEach((id) => clearTimeout(id))
