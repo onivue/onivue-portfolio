@@ -13,7 +13,6 @@ class MyDocument extends Document {
                     <meta name="description" content={APP_DESCRIPTION} />
                     <meta name="theme-color" content="#f9e288" />
                     <meta charSet="utf-8" />
-                    {/* <link rel="manifest" href="/manifest.json" />
                     <link
                         rel="apple-touch-icon"
                         sizes="180x180"
@@ -31,8 +30,9 @@ class MyDocument extends Document {
                         sizes="16x16"
                         href="/icons/favicon-16x16.png"
                     />
-                    <link rel="shortcut icon" href="/icons/favicon.ico" /> */}
+                    <link rel="shortcut icon" href="/icons/favicon.ico" />
                     <link rel="icon" href="/favicon.ico" />
+                    {/* <link rel="manifest" href="/manifest.json" /> */}
                 </Head>
 
                 <body className="antialiased transition-colors duration-300 bg-lightTheme dark:bg-darkTheme selection:bg-amber-300">

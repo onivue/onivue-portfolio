@@ -4,6 +4,7 @@ import { Container } from '@/components/Container'
 import { HiExternalLink, HiLockClosed } from 'react-icons/hi'
 import { useState } from 'react'
 import Modal from './Modal'
+import { SiFigma } from 'react-icons/si'
 
 export const Projects = () => {
     return (
@@ -45,6 +46,19 @@ export const Projects = () => {
                     tags={['react', 'next.js', 'tailwindcss', 'web3forms']}
                 />
                 <ProjectCard
+                    title="onivue-firebase-boilerplate"
+                    text="Firebase authentication and firestore boilerplate."
+                    github="https://github.com/onivue/onivue-firebase-booilerplate"
+                    tags={['react', 'next.js', 'zustand.js', 'tailwind', 'firebase']}
+                />
+                <ProjectCard
+                    title="onivue-figma"
+                    text="Graphics designed by me on Figma."
+                    figma="https://www.figma.com/file/kHvT5gpiheIabgMkCcGKu5/onivue.?node-id=0%3A1"
+                    externalLink="https://www.onivue.ch/"
+                    tags={['react', 'next.js', 'tailwindcss', 'web3forms']}
+                />
+                <ProjectCard
                     title="sscit-visierung"
                     text="Documents sighting workflow based on SharePoint libraries."
                     tags={['javascript', 'css', 'powershell']}
@@ -80,7 +94,7 @@ export const Projects = () => {
     )
 }
 
-export const ProjectCard = ({ title, text, github, externalLink, tags, privateCode }) => {
+export const ProjectCard = ({ title, text, github, externalLink, tags, privateCode, figma }) => {
     const [modalOpen, setModalOpen] = useState(false)
     return (
         <div className="flex flex-col justify-between p-4 transition duration-200 border rounded-lg shadow-lg dark:shadow-slate-900 border-amber-200 hover:-translate-y-2 hover:scale-105">
@@ -111,7 +125,7 @@ export const ProjectCard = ({ title, text, github, externalLink, tags, privateCo
                             Sorry, this project ist private.
                         </p>
                     </div>
-                ) : (
+                ) : github ? (
                     <>
                         <MediaIcon
                             icon={<FaGithub className="w-6 h-6 md:w-7 md:h-7" />}
@@ -120,12 +134,24 @@ export const ProjectCard = ({ title, text, github, externalLink, tags, privateCo
                             className="mr-4"
                             onClick={() => setModalOpen((s) => !s)}
                         />
-                        <MediaIcon
-                            icon={<HiExternalLink className="w-6 h-6 md:w-7 md:h-7" />}
-                            href={externalLink}
-                            className="mr-4"
-                        />
+                        {externalLink && (
+                            <MediaIcon
+                                icon={<HiExternalLink className="w-6 h-6 md:w-7 md:h-7" />}
+                                href={externalLink}
+                                className="mr-4"
+                            />
+                        )}
                     </>
+                ) : (
+                    figma && (
+                        <>
+                            <MediaIcon
+                                icon={<SiFigma className="w-6 h-6 md:w-7 md:h-7" />}
+                                href={figma}
+                                className="mr-4"
+                            />
+                        </>
+                    )
                 )}
             </div>
             <Modal

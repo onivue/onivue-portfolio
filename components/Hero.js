@@ -24,20 +24,6 @@ export const Hero = () => {
                             href="https://github.com/onivue"
                             className="mr-4"
                         />
-                        <MediaIcon
-                            icon={<FaTelegram className="w-6 h-6 md:w-7 md:h-7" />}
-                            href={null}
-                            className="mr-4"
-                        />
-                        <MediaIcon
-                            icon={<FaLinkedin className="w-6 h-6 md:w-7 md:h-7" />}
-                            href={null}
-                            className="mr-4"
-                        />
-                        <MediaIcon
-                            icon={<FaTwitter className="w-6 h-6 md:w-7 md:h-7" />}
-                            href={null}
-                        />
                     </div>
                 </div>
                 <div className="relative flex items-center justify-center row-start-1 my-4 md:row-start-auto">
