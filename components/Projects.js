@@ -32,6 +32,21 @@ export const Projects = () => {
                     ]}
                 />
                 <ProjectCard
+                    title="onivue-kanban"
+                    text="Simplified Kanban planner for personal use that helps you organise your tasks."
+                    github="https://github.com/onivue/onivue-kanban"
+                    externalLink="https://kanban.onivue.ch/"
+                    tags={[
+                        'react',
+                        'next.js',
+                        'tailwindcss',
+                        'zustand.js',
+                        'headless-ui',
+                        'firebase',
+                        'react-beautiful-dnd',
+                    ]}
+                />
+                <ProjectCard
                     title="onivue-numerus"
                     text="Web counter app for fun game nights."
                     github="https://github.com/onivue/onivue-numerus"
