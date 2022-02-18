@@ -44,6 +44,7 @@ export const Projects = () => {
                         'headless-ui',
                         'firebase',
                         'react-beautiful-dnd',
+                        'react-markdown',
                     ]}
                 />
                 <ProjectCard
