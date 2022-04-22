@@ -6,6 +6,9 @@ module.exports = {
     theme: {
         extend: {
             ...animations,
+            fontFamily: {
+                sans: ['Poppins', ...defaultTheme.fontFamily.sans],
+            },
             colors: {
                 darkTheme: '#171a23',
                 lightTheme: '#ffffff',
