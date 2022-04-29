@@ -1,29 +1,44 @@
-# Next.js + Tailwind CSS Example
+<h2 align="center">
+  onivue-webshop
+</h2>
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v2.2)](https://blog.tailwindcss.com/tailwindcss-2-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
 
-It uses the new [`Just-in-Time Mode`](https://tailwindcss.com/docs/just-in-time-mode) for Tailwind CSS.
+<h3 align="center">
+ Modern eCommerce Prototype
+</h3>
 
-## Preview
+---
+## 🚀 [Website](https://webshop.onivue.ch/)
 
-Preview the example live on [StackBlitz](http://stackblitz.com/):
+## 📖 Introduction
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+This project was made for educational purposes.
 
-## Deploy your own
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
+## 🌟 Features
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
+- fakestoreapi.com
+- SSR
+- tailwind
+- responsive design
+  ### coming soon:
+- login system
+- dark mode
 
-## How to use
+### Framework
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
+- ⚛️ **[Next.js](https://nextjs.org)** – A complete React framework for hybrid and server rendering
 
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-# or
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
-```
+### Design System and Animations
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+- 🎨 **[Tailwind](https://tailwindcss.com/)** – A utility-first CSS framework.
+- ✨ **[React Icons](https://react-icons.github.io/react-icons)** – A collection of popular icons to React projects
+
+### Design Patterns
+
+- 🎀 **[Prettier](https://prettier.io)** – An opinionated code formatter, supporting multiple languages and code editors
+
+
+---
+
+### ❤️ Thanks for your attention!
