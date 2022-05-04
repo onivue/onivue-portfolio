@@ -49,10 +49,25 @@ export const Projects = () => {
                 />
                 <ProjectCard
                     title="onivue-webshop"
-                    text="Webshop Prototyp [IN PROGRESS]"
+                    text="Webshop Prototyp"
                     github="https://github.com/onivue/onivue-webshop"
                     externalLink="https://webshop.onivue.ch/"
                     tags={['react', 'next.js', 'tailwindcss']}
+                />
+                <ProjectCard
+                    title="onivue-bookmark"
+                    text="Bookmark Manager [IN PROGRESS]"
+                    github="https://github.com/onivue/onivue-bookmark"
+                    externalLink="https://bookmark.onivue.ch/"
+                    tags={[
+                        'react',
+                        'next.js',
+                        'tailwindcss',
+                        'headless-ui',
+                        'firebase',
+                        'zustand',
+                        'react-hook-forms',
+                    ]}
                 />
                 <ProjectCard
                     title="onivue-numerus"
