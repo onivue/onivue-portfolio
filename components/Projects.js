@@ -30,6 +30,7 @@ export const Projects = () => {
                         'react-pdf',
                         'headless-ui',
                     ]}
+                    privateLink={false}
                 />
                 <ProjectCard
                     title="onivue-kanban"
@@ -46,13 +47,15 @@ export const Projects = () => {
                         'react-beautiful-dnd',
                         'react-markdown',
                     ]}
+                    privateLink={false}
                 />
                 <ProjectCard
                     title="onivue-webshop"
-                    text="Webshop Prototyp"
+                    text="Modern Webshop Prototype with Tailwind and Next.js SSR"
                     github="https://github.com/onivue/onivue-webshop"
                     externalLink="https://webshop.onivue.ch/"
                     tags={['react', 'next.js', 'tailwindcss']}
+                    privateLink={false}
                 />
                 <ProjectCard
                     title="onivue-bookmark"
@@ -75,6 +78,7 @@ export const Projects = () => {
                     github="https://github.com/onivue/onivue-numerus"
                     externalLink="https://numerus.onivue.ch/"
                     tags={['react', 'next.js', 'tailwindcss', 'zustand.js', 'headless-ui']}
+                    privateLink={false}
                 />
                 <ProjectCard
                     title="onivue-portfolio"
@@ -82,6 +86,7 @@ export const Projects = () => {
                     github="https://github.com/onivue/onivue-numerus"
                     externalLink="https://www.onivue.ch/"
                     tags={['react', 'next.js', 'tailwindcss', 'web3forms']}
+                    privateLink={false}
                 />
                 <ProjectCard
                     title="onivue-firebase-boilerplate"
@@ -132,7 +137,16 @@ export const Projects = () => {
     )
 }
 
-export const ProjectCard = ({ title, text, github, externalLink, tags, privateCode, figma }) => {
+export const ProjectCard = ({
+    title,
+    text,
+    github,
+    externalLink,
+    tags,
+    privateCode,
+    figma,
+    privateLink = true,
+}) => {
     const [modalOpen, setModalOpen] = useState(false)
     return (
         <div className="flex flex-col justify-between p-4 transition duration-200 border rounded-lg shadow-lg dark:shadow-slate-900 border-amber-200 hover:-translate-y-2 hover:scale-105">
@@ -167,10 +181,10 @@ export const ProjectCard = ({ title, text, github, externalLink, tags, privateCo
                     <>
                         <MediaIcon
                             icon={<FaGithub className="w-6 h-6 md:w-7 md:h-7" />}
-                            // href={github}
-                            href={null}
+                            // href={privateLink ? null : github}
+                            {...(!privateLink && { href: github })}
                             className="mr-4"
-                            onClick={() => setModalOpen((s) => !s)}
+                            onClick={() => privateLink && setModalOpen((s) => !s)}
                         />
                         {externalLink && (
                             <MediaIcon

@@ -24,13 +24,18 @@ export const Hero = () => {
                             href="https://github.com/onivue"
                             className="mr-4"
                         />
+                        <MediaIcon
+                            icon={<FaLinkedin className="w-6 h-6 md:w-7 md:h-7" />}
+                            href="https://www.linkedin.com/in/albin-hoti-a1991b237"
+                            className="mr-4"
+                        />
                     </div>
                 </div>
                 <div className="relative flex items-center justify-center row-start-1 my-4 md:row-start-auto">
                     <svg
                         viewBox="0 0 200 200"
                         xmlns="http://www.w3.org/2000/svg"
-                        className="absolute w-64 transform drop-shadow-xl -z-10 text-amber-200 animate-fade-in"
+                        className="absolute w-64 transform drop-shadow-xl -z-10 text-amber-200 animate-fade-in animate-tilt"
                     >
                         <path
                             fill="currentColor"
