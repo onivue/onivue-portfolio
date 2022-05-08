@@ -54,7 +54,7 @@ module.exports = {
         },
         tilt: {
             '0%, 50%, 100%': {
-                transform: 'rotate(0deg)',
+                transform: 'rotate(30deg)',
             },
             '25%': {
                 transform: 'rotate(80deg)',
@@ -70,6 +70,6 @@ module.exports = {
         'fade-out-down': 'fade-out-down 0.5s ease-out',
         'fade-in-up': 'fade-in-up 0.5s ease-out',
         'fade-out-up': 'fade-out-up 0.5s ease-out',
-        tilt: 'tilt 10s infinite linear',
+        tilt: 'tilt 20s infinite linear',
     },
 }

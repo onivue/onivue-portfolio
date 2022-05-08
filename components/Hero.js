@@ -35,7 +35,7 @@ export const Hero = () => {
                     <svg
                         viewBox="0 0 200 200"
                         xmlns="http://www.w3.org/2000/svg"
-                        className="absolute w-64 transform drop-shadow-xl -z-10 text-amber-200 animate-fade-in animate-tilt"
+                        className="absolute w-64 transform drop-shadow-xl -z-10 text-amber-200 animate-fade-in animate-tilt opacity-50"
                     >
                         <path
                             fill="currentColor"
@@ -47,7 +47,7 @@ export const Hero = () => {
                     <svg
                         viewBox="0 0 200 200"
                         xmlns="http://www.w3.org/2000/svg"
-                        className="absolute w-64 transform drop-shadow-xl -z-20 text-amber-200 animate-fade-in"
+                        className="absolute w-64 transform drop-shadow-xl -z-20 text-amber-200 animate-fade-in opacity-60"
                     >
                         <path
                             fill="#FEF3C7"
