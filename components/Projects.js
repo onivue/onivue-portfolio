@@ -101,37 +101,6 @@ export const Projects = () => {
                     externalLink="https://www.onivue.ch/"
                     tags={['react', 'next.js', 'tailwindcss', 'web3forms']}
                 />
-                <ProjectCard
-                    title="sscit-visierung"
-                    text="Documents sighting workflow based on SharePoint libraries."
-                    tags={['javascript', 'css', 'powershell']}
-                    privateCode={true}
-                />
-                <ProjectCard
-                    title="sscit-employee-introduction"
-                    text="Add and manage work items for new Employees, based on SharePoint lists."
-                    tags={['react', 'pnpjs', 'css']}
-                    privateCode={true}
-                />
-                <ProjectCard
-                    title="sscit-tip-mip"
-                    text="Generate medication information document for tumor therapy patients, dynamically generated based on selected mediciations.
-                    Word file can be generated directly in the browser."
-                    tags={['javascript', 'css', 'docxtemplater', 'microsoft word']}
-                    privateCode={true}
-                />
-                <ProjectCard
-                    title="sscit-word-template-changer"
-                    text="PowerShell Script to bulk change layout on existing documents, like header, footer and page margins."
-                    tags={['powershell', 'microsoft word']}
-                    privateCode={true}
-                />
-                <ProjectCard
-                    title="sscit-wiki"
-                    text="Document control workflow, based on SharePoint Libraries."
-                    tags={['powershell']}
-                    privateCode={true}
-                />
             </div>
         </Container>
     )
