@@ -2,11 +2,13 @@ import { motion } from 'framer-motion'
 import { FaGithub, FaLinkedin, FaTelegram, FaTwitter } from 'react-icons/fa'
 import { MediaIcon } from '@/components/MediaIcon'
 import { Container } from '@/components/Container'
+import me from '../public/images/me.jpg'
 
+import Image from 'next/image'
 export const Hero = () => {
     return (
-        <Container className="pt-24 md:pt-32 mb-14">
-            <div className="grid grid-cols-1 md:grid-cols-2 justify-items-center">
+        <Container className="mb-14 pt-24 md:pt-32">
+            <div className="grid grid-cols-1 justify-items-center md:grid-cols-2">
                 <div className="flex flex-col justify-center">
                     <div className="flex items-center">
                         <h1 className="mb-1 text-lg font-bold text-black-900 dark:text-white">
@@ -18,24 +20,24 @@ export const Hero = () => {
                         <span className="text-amber-400 ">make small things important</span> & {''}
                         <span className="text-amber-400 ">think out of the box</span>.
                     </h2>
-                    <div className="flex mt-6">
+                    <div className="mt-6 flex">
                         <MediaIcon
-                            icon={<FaGithub className="w-6 h-6 md:w-7 md:h-7" />}
+                            icon={<FaGithub className="h-6 w-6 md:h-7 md:w-7" />}
                             href="https://github.com/onivue"
                             className="mr-4"
                         />
                         <MediaIcon
-                            icon={<FaLinkedin className="w-6 h-6 md:w-7 md:h-7" />}
+                            icon={<FaLinkedin className="h-6 w-6 md:h-7 md:w-7" />}
                             href="https://www.linkedin.com/in/albin-hoti-a1991b237"
                             className="mr-4"
                         />
                     </div>
                 </div>
-                <div className="relative flex items-center justify-center row-start-1 my-4 md:row-start-auto">
+                <div className="relative row-start-1 my-4 flex items-center justify-center md:row-start-auto">
                     <svg
                         viewBox="0 0 200 200"
                         xmlns="http://www.w3.org/2000/svg"
-                        className="absolute w-64 transform drop-shadow-xl -z-10 text-amber-200 animate-fade-in animate-tilt opacity-50"
+                        className="absolute -z-10 w-64 transform animate-tilt text-amber-200 opacity-50 drop-shadow-xl"
                     >
                         <path
                             fill="currentColor"
@@ -47,7 +49,7 @@ export const Hero = () => {
                     <svg
                         viewBox="0 0 200 200"
                         xmlns="http://www.w3.org/2000/svg"
-                        className="absolute w-64 transform drop-shadow-xl -z-20 text-amber-200 animate-fade-in opacity-60"
+                        className="absolute -z-20 w-64 transform text-amber-200 opacity-60 drop-shadow-xl"
                     >
                         <path
                             fill="#FEF3C7"
@@ -56,28 +58,16 @@ export const Hero = () => {
                         />
                     </svg>
 
-                    <motion.img
-                        src="/images/me.jpg"
-                        alt="me"
-                        className="self-center object-cover w-40 h-40 mx-auto my-4 rounded-full shadow-lg md:w-40 md:h-40 ring-4 ring-amber-200"
-                        variants={{
-                            hidden: {
-                                scale: 0,
-                                opacity: 0,
-                            },
-                            visible: {
-                                scale: 1,
-                                opacity: 1,
-                            },
-                        }}
-                        transition={{
-                            damping: 5,
-                            mass: 1,
-                            delay: 0.2,
-                        }}
-                        initial="hidden"
-                        animate="visible"
-                    />
+                    <div className="relative h-40 w-40 rounded-full ring-4 ring-amber-200">
+                        <Image
+                            src={me}
+                            alt="Picture of the author"
+                            layout="fill" // required
+                            objectFit="cover" // change to suit your needs
+                            className="rounded-full shadow-lg" // just an example
+                            placeholder="blur"
+                        />
+                    </div>
                 </div>
             </div>
         </Container>
@@ -95,7 +85,7 @@ export const HeroLink = ({ title, href }) => {
         >
             @{title}
             <motion.span
-                className="absolute bottom-0 left-0 w-full bg-amber-400 h-0.5"
+                className="absolute bottom-0 left-0 h-0.5 w-full bg-amber-400"
                 variants={{
                     hidden: {
                         opacity: 0,

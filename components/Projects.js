@@ -9,13 +9,13 @@ import { SiFigma } from 'react-icons/si'
 export const Projects = () => {
     return (
         <Container className="mb-14">
-            <h2 className="mb-4 text-2xl font-bold dark:text-white text-black-900">Projects</h2>
-            <p className="text-base md:text-xl dark:text-white text-black-700">
+            <h2 className="mb-4 text-2xl font-bold text-black-900 dark:text-white">Projects</h2>
+            <p className="text-base text-black-700 dark:text-white md:text-xl">
                 Here are some of my most favourite projects that I enjoyed coding and designing from
                 scratch.
             </p>
 
-            <div className="grid grid-cols-1 gap-6 mt-6 md:grid-cols-2">
+            <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-2">
                 <ProjectCard
                     title="onivue-resume"
                     text="User friendly web app to generate Resume's on the fly."
@@ -118,38 +118,38 @@ export const ProjectCard = ({
 }) => {
     const [modalOpen, setModalOpen] = useState(false)
     return (
-        <div className="flex flex-col justify-between p-4 transition duration-200 border rounded-lg shadow-lg dark:shadow-slate-900 border-amber-200 hover:-translate-y-2 hover:scale-105">
+        <div className="flex flex-col justify-between rounded-lg border border-amber-200 p-4 shadow-lg transition duration-200 hover:-translate-y-2 hover:scale-105 dark:shadow-slate-900">
             <h2 className="mb-2 text-lg font-bold">{title}</h2>
             <p>{text}</p>
 
-            <div className="flex flex-wrap mt-6 ">
+            <div className="mt-6 flex flex-wrap ">
                 {tags &&
                     tags.map((tag, index) => (
                         <label
                             key={index}
-                            className="inline-block px-3 py-1 mb-2 mr-2 text-xs font-semibold rounded-lg text-amber-800 bg-amber-100"
+                            className="mb-2 mr-2 inline-block rounded-lg bg-amber-100 px-3 py-1 text-xs font-semibold text-amber-800"
                         >
                             {tag}
                         </label>
                     ))}
             </div>
 
-            <div className="flex mt-6 ">
+            <div className="mt-6 flex ">
                 {privateCode ? (
-                    <div className="flex group">
+                    <div className="group flex">
                         <MediaIcon
-                            icon={<HiLockClosed className="w-6 h-6 text-red-300 md:w-7 md:h-7" />}
+                            icon={<HiLockClosed className="h-6 w-6 text-red-300 md:h-7 md:w-7" />}
                             href={null}
                             className="mr-4"
                         />
-                        <p className="self-center text-xs transition duration-300 opacity-0 group-hover:opacity-100">
+                        <p className="self-center text-xs opacity-0 transition duration-300 group-hover:opacity-100">
                             Sorry, this project ist private.
                         </p>
                     </div>
                 ) : github ? (
                     <>
                         <MediaIcon
-                            icon={<FaGithub className="w-6 h-6 md:w-7 md:h-7" />}
+                            icon={<FaGithub className="h-6 w-6 md:h-7 md:w-7" />}
                             // href={privateLink ? null : github}
                             {...(!privateLink && { href: github })}
                             className="mr-4"
@@ -157,7 +157,7 @@ export const ProjectCard = ({
                         />
                         {externalLink && (
                             <MediaIcon
-                                icon={<HiExternalLink className="w-6 h-6 md:w-7 md:h-7" />}
+                                icon={<HiExternalLink className="h-6 w-6 md:h-7 md:w-7" />}
                                 href={externalLink}
                                 className="mr-4"
                             />
@@ -167,7 +167,7 @@ export const ProjectCard = ({
                     figma && (
                         <>
                             <MediaIcon
-                                icon={<SiFigma className="w-6 h-6 md:w-7 md:h-7" />}
+                                icon={<SiFigma className="h-6 w-6 md:h-7 md:w-7" />}
                                 href={figma}
                                 className="mr-4"
                             />
@@ -197,36 +197,36 @@ export const ProjectCard = ({
                             defaultValue="7bb3e387-e17f-41d6-9dc2-20c5ef46a3ca"
                         />
                         <div>
-                            <label htmlFor={'name'} className="block mb-2 text-sm font-semibold">
+                            <label htmlFor={'name'} className="mb-2 block text-sm font-semibold">
                                 Name
                             </label>
                             <input
                                 type="text"
                                 name="name"
                                 required
-                                className="w-full transition duration-150 ease-in rounded-md shadow-md text-black-700 focus:outline-none dark:text-white dark:shadow-none dark:bg-black-700"
+                                className="w-full rounded-md text-black-700 shadow-md transition duration-150 ease-in focus:outline-none dark:bg-black-700 dark:text-white dark:shadow-none"
                             />
                         </div>
                         <div>
-                            <label htmlFor={'email'} className="block mb-2 text-sm font-semibold">
+                            <label htmlFor={'email'} className="mb-2 block text-sm font-semibold">
                                 Mail
                             </label>
                             <input
                                 type="email"
                                 name="email"
                                 required
-                                className="w-full transition duration-150 ease-in rounded-md shadow-md text-black-700 focus:outline-none dark:text-white dark:shadow-none dark:bg-black-700"
+                                className="w-full rounded-md text-black-700 shadow-md transition duration-150 ease-in focus:outline-none dark:bg-black-700 dark:text-white dark:shadow-none"
                             />
                         </div>
                         <div>
-                            <label htmlFor={'message'} className="block mb-2 text-sm font-semibold">
+                            <label htmlFor={'message'} className="mb-2 block text-sm font-semibold">
                                 Message
                             </label>
                             <textarea
                                 name="message"
                                 required
                                 defaultValue={''}
-                                className="w-full transition duration-150 ease-in rounded-md shadow-md text-black-700 focus:outline-none dark:text-white dark:shadow-none dark:bg-black-700"
+                                className="w-full rounded-md text-black-700 shadow-md transition duration-150 ease-in focus:outline-none dark:bg-black-700 dark:text-white dark:shadow-none"
                             />
                         </div>
                         <input
@@ -242,7 +242,7 @@ export const ProjectCard = ({
                         <input type="hidden" name="from_name" value={`onivue-portfolio`} />
                         <button
                             type="submit"
-                            className="p-4 px-6 text-center rounded-lg shadow-lg cursor-pointer text-black-900 bg-amber-200 shadow-amber-100 hover:bg-amber-300 dark:shadow-none"
+                            className="cursor-pointer rounded-lg bg-amber-200 p-4 px-6 text-center text-black-900 shadow-lg shadow-amber-100 hover:bg-amber-300 dark:shadow-none"
                         >
                             Send Request
                         </button>

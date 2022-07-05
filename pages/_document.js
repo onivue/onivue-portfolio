@@ -1,7 +1,7 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 
 const APP_NAME = 'onivue'
-const APP_DESCRIPTION = 'Potfolio'
+const APP_DESCRIPTION = 'Portfolio'
 
 class MyDocument extends Document {
     render() {
