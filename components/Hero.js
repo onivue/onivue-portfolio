@@ -58,14 +58,14 @@ export const Hero = () => {
                         />
                     </svg>
 
-                    <div className="relative h-40 w-40 rounded-full ring-4 ring-amber-200">
+                    <div className="relative h-40 w-40 rounded-full shadow-lg ring-4 ring-amber-200">
                         <Image
                             src={me}
                             alt="Picture of the author"
                             layout="fill" // required
                             objectFit="cover" // change to suit your needs
-                            className="rounded-full shadow-lg" // just an example
-                            placeholder="blur"
+                            className="rounded-full" // just an example
+                            // placeholder="blur"
                         />
                     </div>
                 </div>
