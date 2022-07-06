@@ -39,7 +39,7 @@ class MyDocument extends Document {
                     {/* <link rel="manifest" href="/manifest.json" /> */}
                 </Head>
 
-                <body className="antialiased transition-colors duration-300 bg-lightTheme dark:bg-darkTheme selection:bg-amber-300">
+                <body className="bg-lightTheme antialiased transition-colors duration-300 selection:bg-amber-300 dark:bg-darkTheme">
                     <Main />
                     <NextScript />
                 </body>

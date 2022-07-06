@@ -65,7 +65,7 @@ export const Hero = () => {
                             layout="fill" // required
                             objectFit="cover" // change to suit your needs
                             className="rounded-full" // just an example
-                            // placeholder="blur"
+                            placeholder="blur"
                         />
                     </div>
                 </div>
