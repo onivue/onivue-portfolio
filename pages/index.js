@@ -15,7 +15,7 @@ export default function Home() {
                 <Hero />
             </AnimationOnScroll>
             <div className="overflow-y-hidden">
-                <AnimationOnScroll animateIn="animate-fade-in-up" offset={0}>
+                <AnimationOnScroll animateIn="animate-fade-in-up" offset={0} animateOnce={true}>
                     <Projects />
                 </AnimationOnScroll>
                 <AnimationOnScroll animateIn="animate-fade-in-up" animateOnce={true}>

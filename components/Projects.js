@@ -59,7 +59,7 @@ export const Projects = () => {
                 />
                 <ProjectCard
                     title="onivue-bookmark"
-                    text="Bookmark Manager [IN PROGRESS]"
+                    text="Bookmark Manager"
                     github="https://github.com/onivue/onivue-bookmark"
                     externalLink="https://bookmark.onivue.ch/"
                     tags={[
