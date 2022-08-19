@@ -118,7 +118,7 @@ export const ProjectCard = ({
 }) => {
     const [modalOpen, setModalOpen] = useState(false)
     return (
-        <div className="flex flex-col justify-between rounded-lg border border-amber-200 p-4 shadow-lg transition duration-200 hover:-translate-y-2 hover:scale-105 dark:shadow-slate-900">
+        <div className="flex flex-col justify-between rounded-lg border border-teal-200 p-4 shadow-lg shadow-teal-100/60 transition duration-200 hover:-translate-y-2 hover:scale-105 dark:shadow-slate-900">
             <h2 className="mb-2 text-lg font-bold">{title}</h2>
             <p>{text}</p>
 
@@ -127,7 +127,7 @@ export const ProjectCard = ({
                     tags.map((tag, index) => (
                         <label
                             key={index}
-                            className="mb-2 mr-2 inline-block rounded-lg bg-amber-100 px-3 py-1 text-xs font-semibold text-amber-800"
+                            className="mb-2 mr-2 inline-block rounded-lg bg-teal-100 px-3 py-1 text-xs font-semibold text-teal-800"
                         >
                             {tag}
                         </label>
@@ -242,7 +242,7 @@ export const ProjectCard = ({
                         <input type="hidden" name="from_name" value={`onivue-portfolio`} />
                         <button
                             type="submit"
-                            className="cursor-pointer rounded-lg bg-amber-200 p-4 px-6 text-center text-black-900 shadow-lg shadow-amber-100 hover:bg-amber-300 dark:shadow-none"
+                            className="cursor-pointer rounded-lg bg-teal-200 p-4 px-6 text-center text-black-900 shadow-lg shadow-teal-100 hover:bg-teal-300 dark:shadow-none"
                         >
                             Send Request
                         </button>

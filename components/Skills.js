@@ -18,18 +18,18 @@ import {
     SiFigma,
 } from 'react-icons/si'
 
-const iconStyle = 'w-16 h-16 text-amber-200'
+const iconStyle = 'w-16 h-16 text-teal-200'
 
 export const Skills = () => {
     return (
         <Container className="mb-14">
-            <h2 className="mb-4 text-2xl font-bold dark:text-white text-black-900">Skills</h2>
-            <p className="text-base md:text-xl dark:text-white text-black-700">
+            <h2 className="mb-4 text-2xl font-bold text-black-900 dark:text-white">Skills</h2>
+            <p className="text-base text-black-700 dark:text-white md:text-xl">
                 The use of the latest technologies is important to me. These are the tools I am most
                 familiar with.
             </p>
 
-            <div className="grid grid-cols-2 gap-4 mt-6 md:grid-cols-3">
+            <div className="mt-6 grid grid-cols-2 gap-4 md:grid-cols-3">
                 <ProjectCard
                     title="React"
                     text=""
@@ -109,7 +109,7 @@ export const Skills = () => {
 
 export const ProjectCard = ({ title, text, externalLink, icon }) => {
     return (
-        <div className="flex flex-col items-center justify-center p-4 transition duration-200 border rounded-lg shadow-lg dark:shadow-slate-900 border-amber-200 hover:-translate-y-2 hover:scale-105">
+        <div className="flex flex-col items-center justify-center rounded-lg border border-teal-200 p-4 shadow-lg shadow-teal-100/50 transition duration-200 hover:-translate-y-2 hover:scale-105 dark:shadow-slate-900">
             <h2 className="mb-2 text-lg font-bold">{title}</h2>
             <p>{text}</p>
 

@@ -18,7 +18,7 @@ export default function Modal({ show, onClose, onCancel, onSubmit, title, childr
                     onClose={onClose}
                     initialFocus={closeButtonRef}
                 >
-                    <div className="items-end justify-center block min-h-screen text-center">
+                    <div className="block min-h-screen items-end justify-center text-center">
                         <Transition.Child
                             enter="ease-out duration-300"
                             enterFrom="opacity-0"
@@ -28,7 +28,7 @@ export default function Modal({ show, onClose, onCancel, onSubmit, title, childr
                             leaveTo="opacity-0"
                         >
                             {/* //! -----------------------BACKDROP--------------------------------- */}
-                            <Dialog.Overlay className="fixed inset-0 transition-opacity bg-gray-900 bg-opacity-75 backdrop-filter backdrop-blur-sm" />
+                            <Dialog.Overlay className="fixed inset-0 bg-gray-900 bg-opacity-75 backdrop-blur-sm backdrop-filter transition-opacity" />
                         </Transition.Child>
 
                         {/* This element is to trick the browser into centering the modal contents. */}
@@ -45,42 +45,42 @@ export default function Modal({ show, onClose, onCancel, onSubmit, title, childr
                             leaveTo="opacity-0 translate-y-6"
                         >
                             {/* //! -----------------------CONTENT--------------------------------- */}
-                            <div className="inline-block w-11/12 overflow-hidden text-left align-middle transition-all transform rounded-lg shadow-xl lg:my-8 lg:max-w-2xl lg:w-full">
+                            <div className="inline-block w-11/12 transform overflow-hidden rounded-lg text-left align-middle shadow-xl transition-all lg:my-8 lg:w-full lg:max-w-2xl">
                                 {/* //! -----------------------CLOSE X BUTTON--------------------------------- */}
                                 <button
-                                    className="absolute right-0 flex items-center justify-center p-2 cursor-pointer focus:outline-none "
+                                    className="absolute right-0 flex cursor-pointer items-center justify-center p-2 focus:outline-none "
                                     onClick={onClose}
                                     ref={closeButtonRef}
                                 >
                                     <HiX
-                                        className="w-5 h-5 text-gray-600 hover:text-amber-400"
+                                        className="h-5 w-5 text-gray-600 hover:text-teal-400"
                                         aria-hidden="true"
                                     />
                                 </button>
                                 {/* //! -----------------------HEADER--------------------------------- */}
-                                <div className="p-6 bg-white dark:text-white dark:bg-darkTheme">
+                                <div className="bg-white p-6 dark:bg-darkTheme dark:text-white">
                                     <div className="items-center sm:flex">
                                         {/* //! -----------------------ICON--------------------------------- */}
 
                                         {type === 'warning' && (
-                                            <div className="flex items-center justify-center flex-shrink-0 w-12 h-12 mx-auto bg-red-100 rounded-full sm:mx-0 sm:h-10 sm:w-10 sm:mr-4">
-                                                <HiOutlineExclamation className="w-6 h-6 text-red-600" />
+                                            <div className="mx-auto flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-red-100 sm:mx-0 sm:mr-4 sm:h-10 sm:w-10">
+                                                <HiOutlineExclamation className="h-6 w-6 text-red-600" />
                                             </div>
                                         )}
                                         {type === 'info' && (
-                                            <div className="flex items-center justify-center flex-shrink-0 w-12 h-12 mx-auto bg-blue-100 rounded-full sm:mx-0 sm:h-10 sm:w-10 sm:mr-4">
-                                                <HiOutlineInformationCircle className="w-6 h-6 text-blue-600" />
+                                            <div className="mx-auto flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-blue-100 sm:mx-0 sm:mr-4 sm:h-10 sm:w-10">
+                                                <HiOutlineInformationCircle className="h-6 w-6 text-blue-600" />
                                             </div>
                                         )}
                                         {(type === 'edit' || !type) && (
-                                            <div className="flex items-center justify-center flex-shrink-0 w-12 h-12 mx-auto rounded-full bg-amber-100 sm:mx-0 sm:h-10 sm:w-10 sm:mr-4">
-                                                <HiOutlinePencilAlt className="w-6 h-6 text-amber-600" />
+                                            <div className="mx-auto flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-teal-100 sm:mx-0 sm:mr-4 sm:h-10 sm:w-10">
+                                                <HiOutlinePencilAlt className="h-6 w-6 text-teal-600" />
                                             </div>
                                         )}
                                         {/* //! -----------------------TITLE--------------------------------- */}
                                         <Dialog.Title
                                             as="h3"
-                                            className="mt-4 text-xl font-medium leading-6 text-center sm:mt-0 "
+                                            className="mt-4 text-center text-xl font-medium leading-6 sm:mt-0 "
                                         >
                                             {title}
                                         </Dialog.Title>
@@ -90,11 +90,11 @@ export default function Modal({ show, onClose, onCancel, onSubmit, title, childr
                                 </div>
                                 {/* //! -----------------------FOOTER--------------------------------- */}
                                 {(onSubmit || onCancel) && (
-                                    <div className="px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+                                    <div className="px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
                                         {onSubmit && (
                                             <button
                                                 type="button"
-                                                className="inline-flex justify-center w-full px-4 py-2 text-base font-medium text-white bg-red-600 border border-transparent rounded-md shadow-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:ml-3 sm:w-auto sm:text-sm"
+                                                className="inline-flex w-full justify-center rounded-md border border-transparent bg-red-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm"
                                             >
                                                 Deactivate
                                             </button>
@@ -103,7 +103,7 @@ export default function Modal({ show, onClose, onCancel, onSubmit, title, childr
                                         {onCancel && (
                                             <button
                                                 type="button"
-                                                className="inline-flex justify-center w-full px-4 py-2 mt-3 text-base font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-300 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
+                                                className="mt-3 inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-teal-300 focus:ring-offset-2 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
                                                 onClick={onCancel}
                                             >
                                                 Cancel

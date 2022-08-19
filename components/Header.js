@@ -59,36 +59,36 @@ export const Header = () => {
     return (
         <div
             className={clsx(
-                'fixed z-20 w-full opacity-90  duration-300 ',
-                'backdrop-filter backdrop-blur-sm  bg-opacity-80 dark:bg-opacity-100  border-amber-200 border-opacity-0',
-                visible ? 'top-0' : '-top-[5rem] border-amber-200 border-b-8 border-opacity-100',
+                'fixed z-20 w-full animate-fade-in  opacity-90 duration-300',
+                'border-teal-200 border-opacity-0  bg-opacity-80 backdrop-blur-sm  backdrop-filter dark:bg-opacity-100',
+                visible ? 'top-0' : '-top-[5rem] border-b-8 border-teal-200 border-opacity-100',
             )}
         >
             <Container>
-                <div className="flex items-center justify-between w-auto py-4 ">
+                <div className="flex w-auto items-center justify-between py-4 ">
                     <Link href="/">
                         <a href="/">
                             <div className="flex">
-                                <div className="p-2 rounded-full fill-current dark:bg-white">
+                                <div className="rounded-full fill-current p-2">
                                     <LogoIcon
-                                        className="w-8 h-8 filter drop-shadow-md drop-s"
+                                        className="h-8 w-8 drop-shadow-md filter"
                                         onClick={null}
                                     />
                                 </div>
-                                <div className="self-center ml-4">onivue</div>
+                                <div className="ml-4 self-center">onivue</div>
                             </div>
                         </a>
                     </Link>
                     <div className="flex items-center">
                         <button
-                            className="items-center justify-center w-12 h-12 rounded-md dark:bg-gray-900 focus:outline-none focus:ring-2 ring-amber-200 d-flex"
+                            className="d-flex h-12 w-12 items-center justify-center rounded-md ring-teal-200 focus:outline-none focus:ring-2 dark:bg-gray-900"
                             onClick={toggleTheme}
                         >
                             {mounted ? (
                                 theme === Themes.light ? (
-                                    <HiMoon className="inline w-6 h-6 ml-1" />
+                                    <HiMoon className="ml-1 inline h-6 w-6" />
                                 ) : (
-                                    <HiSun className="inline w-6 h-6" />
+                                    <HiSun className="inline h-6 w-6" />
                                 )
                             ) : null}
                         </button>

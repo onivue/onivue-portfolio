@@ -17,8 +17,8 @@ export const Hero = () => {
                     </div>
                     <h2 className="text-3xl font-bold">
                         I'm a developer — {''}
-                        <span className="text-amber-400 ">make small things important</span> & {''}
-                        <span className="text-amber-400 ">think out of the box</span>.
+                        <span className="text-teal-400 ">make small things important</span> & {''}
+                        <span className="text-teal-400 ">think out of the box</span>.
                     </h2>
                     <div className="mt-6 flex">
                         <MediaIcon
@@ -37,7 +37,7 @@ export const Hero = () => {
                     <svg
                         viewBox="0 0 200 200"
                         xmlns="http://www.w3.org/2000/svg"
-                        className="absolute -z-10 w-64 transform animate-tilt text-amber-200 opacity-50 drop-shadow-xl"
+                        className="absolute -z-10 w-64 transform animate-tilt text-teal-200 opacity-50 drop-shadow-xl"
                     >
                         <path
                             fill="currentColor"
@@ -49,16 +49,16 @@ export const Hero = () => {
                     <svg
                         viewBox="0 0 200 200"
                         xmlns="http://www.w3.org/2000/svg"
-                        className="absolute -z-20 w-64 transform text-amber-200 opacity-60 drop-shadow-xl"
+                        className="absolute -z-20 w-64 transform text-teal-100 opacity-60 drop-shadow-xl"
                     >
                         <path
-                            fill="#FEF3C7"
+                            fill="currentColor"
                             d="M40.5,-64.7C54,-54.3,67.5,-45.7,71.5,-33.6C75.5,-21.5,70.1,-6.1,69.1,10.8C68,27.8,71.5,46.3,65.2,60.3C59,74.3,43.2,83.8,26.5,87.5C9.7,91.2,-7.9,89.1,-24.2,83.7C-40.5,78.3,-55.3,69.6,-62,56.6C-68.6,43.7,-67,26.6,-69.7,9.8C-72.4,-6.9,-79.5,-23.2,-77.2,-38.2C-74.9,-53.2,-63.3,-66.8,-48.9,-76.8C-34.5,-86.7,-17.2,-93.1,-1.9,-90.2C13.5,-87.3,27,-75.2,40.5,-64.7Z"
                             transform="translate(100 100)"
                         />
                     </svg>
 
-                    <div className="relative h-40 w-40 rounded-full shadow-lg ring-4 ring-amber-200">
+                    <div className="relative h-40 w-40 rounded-full shadow-lg ring-4 ring-teal-200">
                         <Image
                             src={me}
                             alt="Picture of the author"
@@ -79,13 +79,13 @@ export const HeroLink = ({ title, href }) => {
         <motion.a
             href={href}
             target="_blank"
-            className="relative text-amber-400"
+            className="relative text-teal-400"
             whileHover="visible"
             initial="hidden"
         >
             @{title}
             <motion.span
-                className="absolute bottom-0 left-0 h-0.5 w-full bg-amber-400"
+                className="absolute bottom-0 left-0 h-0.5 w-full bg-teal-400"
                 variants={{
                     hidden: {
                         opacity: 0,

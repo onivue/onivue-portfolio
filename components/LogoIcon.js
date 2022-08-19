@@ -1,7 +1,7 @@
 function LogoIcon({ className, ...props }) {
     return (
         <svg
-            className={className || 'w-5 h-5'}
+            className={`${className || 'h-5 w-5'} text-teal-400`}
             viewBox="0 0 33 33"
             xmlns="http://www.w3.org/2000/svg"
             {...props}
@@ -12,7 +12,7 @@ function LogoIcon({ className, ...props }) {
             />
             <path
                 d="M10 26C10 27.6569 8.6568 29 7 29C5.3432 29 4 27.6569 4 26C4 24.3431 5.3432 23 7 23C8.6568 23 10 24.3431 10 26Z"
-                fill="#fbc539"
+                fill="currentColor"
             />
         </svg>
     )
