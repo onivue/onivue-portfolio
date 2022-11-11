@@ -7,9 +7,9 @@ import me from '../public/images/me.png'
 import Image from 'next/image'
 export const Hero = () => {
     return (
-        <Container className="mb-14 pt-24 md:pt-32">
-            <div className="grid grid-cols-1 justify-items-center md:grid-cols-2">
-                <div className="flex flex-col justify-center justify-self-start">
+        <Container className="h-screen pt-24 md:mb-14 md:h-auto md:pt-32">
+            <div className="grid h-full grid-cols-1 justify-items-center md:grid-cols-2">
+                <div className="mb-10 flex flex-col justify-center">
                     <div className="flex items-center">
                         <h1 className="mb-1 text-lg font-bold text-black-900 dark:text-white">
                             Hey! I'm Albin
@@ -33,6 +33,7 @@ export const Hero = () => {
                         />
                     </div>
                 </div>
+
                 <div className="relative row-start-1 my-4 flex items-center justify-center md:row-start-auto">
                     <svg
                         viewBox="0 0 200 200"

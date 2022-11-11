@@ -15,7 +15,7 @@ export const Projects = () => {
                 scratch.
             </p>
 
-            <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-2">
+            <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
                 <ProjectCard
                     title="onivue-resume"
                     text="User friendly web app to generate Resume's on the fly."
