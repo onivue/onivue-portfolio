@@ -13,7 +13,7 @@ module.exports = {
             colors: {
                 darkTheme: '#171a23',
                 lightTheme: '#ffffff',
-
+                primary: colors.stone,
                 gray: {
                     700: '#8E8E8E',
                     900: '#363B49',

@@ -8,7 +8,7 @@ export const MediaIcon = ({ icon, href = null, className, onClick }) => {
             className={clsx('', className, onClick && 'cursor-pointer')}
             onClick={onClick}
         >
-            <div className="transition duration-200 text-black-900 dark:text-white hover:rotate-12 hover:scale-125">
+            <div className="text-black-900 transition duration-200 hover:rotate-12 hover:scale-125 dark:text-white">
                 {icon}
             </div>
         </a>

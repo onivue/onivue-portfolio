@@ -1,7 +1,7 @@
 function LogoIcon({ className, ...props }) {
     return (
         <svg
-            className={`${className || 'h-5 w-5'} text-teal-400`}
+            className={`${className || 'h-5 w-5'} text-primary-400`}
             viewBox="0 0 33 33"
             xmlns="http://www.w3.org/2000/svg"
             {...props}

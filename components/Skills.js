@@ -13,12 +13,12 @@ import {
     SiPowershell,
     SiNodedotjs,
     SiVercel,
-    SiMicrosoftsharepoint,
+    SiTypescript,
     SiGithub,
     SiFigma,
 } from 'react-icons/si'
 
-const iconStyle = 'w-16 h-16 text-teal-200'
+const iconStyle = 'w-16 h-16 text-primary-200'
 
 export const Skills = () => {
     return (
@@ -37,6 +37,18 @@ export const Skills = () => {
                     externalLink=""
                 />
                 <ProjectCard
+                    title="Next.js"
+                    text=""
+                    icon={<SiNextdotjs className={iconStyle} />}
+                    externalLink=""
+                />
+                <ProjectCard
+                    title="TypeScript"
+                    text=""
+                    icon={<SiTypescript className={iconStyle} />}
+                    externalLink=""
+                />
+                <ProjectCard
                     title="Tailwind"
                     text=""
                     icon={<SiTailwindcss className={iconStyle} />}
@@ -48,22 +60,36 @@ export const Skills = () => {
                     icon={<SiFirebase className={iconStyle} />}
                     externalLink=""
                 />
+
                 <ProjectCard
-                    title="Next.js"
+                    title="Github"
                     text=""
-                    icon={<SiNextdotjs className={iconStyle} />}
+                    icon={<SiGithub className={iconStyle} />}
+                    externalLink=""
+                />
+
+                <ProjectCard
+                    title="PowerShell"
+                    text=""
+                    icon={<SiPowershell className={iconStyle} />}
+                    externalLink=""
+                />
+                <ProjectCard
+                    title="Vercel"
+                    text=""
+                    icon={<SiVercel className={iconStyle} />}
+                    externalLink=""
+                />
+                <ProjectCard
+                    title="Node.js"
+                    text=""
+                    icon={<SiNodedotjs className={iconStyle} />}
                     externalLink=""
                 />
                 <ProjectCard
                     title="VS Code"
                     text=""
                     icon={<SiVisualstudiocode className={iconStyle} />}
-                    externalLink=""
-                />
-                <ProjectCard
-                    title="Github"
-                    text=""
-                    icon={<SiGithub className={iconStyle} />}
                     externalLink=""
                 />
                 <ProjectCard
@@ -78,30 +104,6 @@ export const Skills = () => {
                     icon={<SiFigma className={iconStyle} />}
                     externalLink=""
                 />
-                <ProjectCard
-                    title="PowerShell"
-                    text=""
-                    icon={<SiPowershell className={iconStyle} />}
-                    externalLink=""
-                />
-                <ProjectCard
-                    title="Node.js"
-                    text=""
-                    icon={<SiNodedotjs className={iconStyle} />}
-                    externalLink=""
-                />
-                <ProjectCard
-                    title="Vercel"
-                    text=""
-                    icon={<SiVercel className={iconStyle} />}
-                    externalLink=""
-                />
-                <ProjectCard
-                    title="SharePoint"
-                    text=""
-                    icon={<SiMicrosoftsharepoint className={iconStyle} />}
-                    externalLink=""
-                />
             </div>
         </Container>
     )
@@ -109,7 +111,7 @@ export const Skills = () => {
 
 export const ProjectCard = ({ title, text, externalLink, icon }) => {
     return (
-        <div className="flex flex-col items-center justify-center rounded-lg border border-teal-200 p-4 shadow-lg shadow-teal-100/50 transition duration-200 hover:-translate-y-2 hover:scale-105 dark:shadow-slate-900">
+        <div className="flex flex-col items-center justify-center rounded-xl border-4 border-primary-100 p-4 transition duration-200 hover:-translate-y-2 dark:shadow-slate-900">
             <h2 className="mb-2 text-lg font-bold">{title}</h2>
             <p>{text}</p>
 

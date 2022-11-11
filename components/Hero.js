@@ -2,24 +2,24 @@ import { motion } from 'framer-motion'
 import { FaGithub, FaLinkedin, FaTelegram, FaTwitter } from 'react-icons/fa'
 import { MediaIcon } from '@/components/MediaIcon'
 import { Container } from '@/components/Container'
-import me from '../public/images/me.jpg'
+import me from '../public/images/me.png'
 
 import Image from 'next/image'
 export const Hero = () => {
     return (
         <Container className="mb-14 pt-24 md:pt-32">
             <div className="grid grid-cols-1 justify-items-center md:grid-cols-2">
-                <div className="flex flex-col justify-center">
+                <div className="flex flex-col justify-center justify-self-start">
                     <div className="flex items-center">
                         <h1 className="mb-1 text-lg font-bold text-black-900 dark:text-white">
-                            Hey! I'm Albin 👋
+                            Hey! I'm Albin
                         </h1>
                     </div>
-                    <h2 className="text-3xl font-bold">
-                        I'm a developer — {''}
-                        <span className="text-teal-400 ">make small things important</span> & {''}
-                        <span className="text-teal-400 ">think out of the box</span>.
-                    </h2>
+                    <h2 className="text-3xl font-bold">I'm a developer</h2>
+                    <div>
+                        <span className="text-primary-400 ">make small things important</span> &{' '}
+                        <span className="text-primary-400 ">think out of the box</span>.
+                    </div>
                     <div className="mt-6 flex">
                         <MediaIcon
                             icon={<FaGithub className="h-6 w-6 md:h-7 md:w-7" />}
@@ -37,7 +37,7 @@ export const Hero = () => {
                     <svg
                         viewBox="0 0 200 200"
                         xmlns="http://www.w3.org/2000/svg"
-                        className="absolute -z-10 w-64 transform animate-tilt text-teal-200 opacity-50 drop-shadow-xl"
+                        className="absolute -z-10 w-64 transform animate-tilt text-primary-200 opacity-50 drop-shadow-xl"
                     >
                         <path
                             fill="currentColor"
@@ -49,7 +49,7 @@ export const Hero = () => {
                     <svg
                         viewBox="0 0 200 200"
                         xmlns="http://www.w3.org/2000/svg"
-                        className="absolute -z-20 w-64 transform text-teal-100 opacity-60 drop-shadow-xl"
+                        className="absolute -z-20 w-64 transform text-primary-100 opacity-60 drop-shadow-xl"
                     >
                         <path
                             fill="currentColor"
@@ -58,7 +58,7 @@ export const Hero = () => {
                         />
                     </svg>
 
-                    <div className="relative h-40 w-40 rounded-full shadow-lg ring-4 ring-teal-200">
+                    <div className="relative h-40 w-40 rounded-full  ring-4 ring-primary-200">
                         <Image
                             src={me}
                             alt="Picture of the author"
@@ -79,13 +79,13 @@ export const HeroLink = ({ title, href }) => {
         <motion.a
             href={href}
             target="_blank"
-            className="relative text-teal-400"
+            className="relative text-primary-400"
             whileHover="visible"
             initial="hidden"
         >
             @{title}
             <motion.span
-                className="absolute bottom-0 left-0 h-0.5 w-full bg-teal-400"
+                className="absolute bottom-0 left-0 h-0.5 w-full bg-primary-400"
                 variants={{
                     hidden: {
                         opacity: 0,

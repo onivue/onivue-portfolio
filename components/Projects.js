@@ -118,7 +118,7 @@ export const ProjectCard = ({
 }) => {
     const [modalOpen, setModalOpen] = useState(false)
     return (
-        <div className="flex flex-col justify-between rounded-lg border border-teal-200 p-4 shadow-lg shadow-teal-100/60 transition duration-200 hover:-translate-y-2 hover:scale-105 dark:shadow-slate-900">
+        <div className="flex flex-col justify-between rounded-xl border-4 border-primary-100 p-4  shadow-primary-100/60 transition duration-200 hover:-translate-y-2 dark:shadow-slate-900">
             <h2 className="mb-2 text-lg font-bold">{title}</h2>
             <p>{text}</p>
 
@@ -127,7 +127,7 @@ export const ProjectCard = ({
                     tags.map((tag, index) => (
                         <label
                             key={index}
-                            className="mb-2 mr-2 inline-block rounded-lg bg-teal-100 px-3 py-1 text-xs font-semibold text-teal-800"
+                            className="mb-2 mr-2 inline-block rounded-lg bg-primary-100 px-3 py-1 text-xs font-semibold text-primary-800"
                         >
                             {tag}
                         </label>
@@ -204,7 +204,7 @@ export const ProjectCard = ({
                                 type="text"
                                 name="name"
                                 required
-                                className="w-full rounded-md text-black-700 shadow-md transition duration-150 ease-in focus:outline-none dark:bg-black-700 dark:text-white dark:shadow-none"
+                                className="w-full rounded-xl text-black-700 shadow-md transition duration-150 ease-in focus:outline-none dark:bg-black-700 dark:text-white dark:shadow-none"
                             />
                         </div>
                         <div>
@@ -215,7 +215,7 @@ export const ProjectCard = ({
                                 type="email"
                                 name="email"
                                 required
-                                className="w-full rounded-md text-black-700 shadow-md transition duration-150 ease-in focus:outline-none dark:bg-black-700 dark:text-white dark:shadow-none"
+                                className="w-full rounded-xl text-black-700 shadow-md transition duration-150 ease-in focus:outline-none dark:bg-black-700 dark:text-white dark:shadow-none"
                             />
                         </div>
                         <div>
@@ -226,7 +226,7 @@ export const ProjectCard = ({
                                 name="message"
                                 required
                                 defaultValue={''}
-                                className="w-full rounded-md text-black-700 shadow-md transition duration-150 ease-in focus:outline-none dark:bg-black-700 dark:text-white dark:shadow-none"
+                                className="w-full rounded-xl text-black-700 shadow-md transition duration-150 ease-in focus:outline-none dark:bg-black-700 dark:text-white dark:shadow-none"
                             />
                         </div>
                         <input
@@ -242,7 +242,7 @@ export const ProjectCard = ({
                         <input type="hidden" name="from_name" value={`onivue-portfolio`} />
                         <button
                             type="submit"
-                            className="cursor-pointer rounded-lg bg-teal-200 p-4 px-6 text-center text-black-900 shadow-lg shadow-teal-100 hover:bg-teal-300 dark:shadow-none"
+                            className="cursor-pointer rounded-lg bg-primary-200 p-4 px-6 text-center text-black-900  shadow-primary-100 hover:bg-primary-300 dark:shadow-none"
                         >
                             Send Request
                         </button>

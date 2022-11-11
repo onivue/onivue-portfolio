@@ -57,44 +57,43 @@ export const Header = () => {
     useEffect(() => setMounted(true), [])
 
     return (
-        <div
-            className={clsx(
-                'fixed z-20 w-full animate-fade-in  opacity-90 duration-300',
-                'border-teal-200 border-opacity-0  bg-opacity-80 backdrop-blur-sm  backdrop-filter dark:bg-opacity-100',
-                visible ? 'top-0' : '-top-[5rem] border-b-8 border-teal-200 border-opacity-100',
-            )}
-        >
-            <Container>
-                <div className="flex w-auto items-center justify-between py-4 ">
-                    <Link href="/">
-                        <a href="/">
-                            <div className="flex">
-                                <div className="rounded-full fill-current p-2">
-                                    <LogoIcon
-                                        className="h-8 w-8 drop-shadow-md filter"
-                                        onClick={null}
-                                    />
+        <>
+            <div
+                className={clsx(
+                    'fixed z-20 w-full animate-fade-in  opacity-90 backdrop-blur-sm duration-300',
+                    'border-b-2 border-primary-200 border-opacity-0  ',
+                    visible ? 'top-0' : '-top-[5rem]',
+                )}
+            >
+                <Container>
+                    <div className="flex w-auto items-center justify-between py-4 ">
+                        <Link href="/">
+                            <a href="/">
+                                <div className="flex">
+                                    <div className="rounded-full fill-current p-2">
+                                        <LogoIcon className="h-8 w-8" onClick={null} />
+                                    </div>
+                                    <div className="ml-4 self-center">onivue</div>
                                 </div>
-                                <div className="ml-4 self-center">onivue</div>
-                            </div>
-                        </a>
-                    </Link>
-                    <div className="flex items-center">
-                        <button
-                            className="d-flex h-12 w-12 items-center justify-center rounded-md ring-teal-200 focus:outline-none focus:ring-2 dark:bg-gray-900"
-                            onClick={toggleTheme}
-                        >
-                            {mounted ? (
-                                theme === Themes.light ? (
-                                    <HiMoon className="ml-1 inline h-6 w-6" />
-                                ) : (
-                                    <HiSun className="inline h-6 w-6" />
-                                )
-                            ) : null}
-                        </button>
+                            </a>
+                        </Link>
+                        <div className="flex items-center">
+                            <button
+                                className="d-flex h-12 w-12 items-center justify-center rounded-xl ring-primary-200 focus:outline-none focus:ring-2 dark:bg-gray-900"
+                                onClick={toggleTheme}
+                            >
+                                {mounted ? (
+                                    theme === Themes.light ? (
+                                        <HiMoon className="ml-1 inline h-6 w-6" />
+                                    ) : (
+                                        <HiSun className="inline h-6 w-6" />
+                                    )
+                                ) : null}
+                            </button>
+                        </div>
                     </div>
-                </div>
-            </Container>
-        </div>
+                </Container>
+            </div>
+        </>
     )
 }
