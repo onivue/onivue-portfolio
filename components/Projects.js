@@ -118,7 +118,7 @@ export const ProjectCard = ({
 }) => {
     const [modalOpen, setModalOpen] = useState(false)
     return (
-        <div className="flex flex-col justify-between rounded-xl border-4 border-primary-100 p-4  shadow-primary-100/60 transition duration-200 hover:-translate-y-2 dark:shadow-slate-900">
+        <div className="flex flex-col justify-between rounded-lg border-2 border-primary-100 p-4  shadow-primary-100/60 transition duration-200 hover:-translate-y-2 dark:shadow-slate-900">
             <h2 className="mb-2 text-lg font-bold">{title}</h2>
             <p>{text}</p>
 

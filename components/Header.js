@@ -60,7 +60,7 @@ export const Header = () => {
         <>
             <div
                 className={clsx(
-                    'fixed z-20 w-full animate-fade-in  opacity-90 backdrop-blur-sm duration-300',
+                    'fixed z-20 w-full  animate-fade-in opacity-90 backdrop-blur-sm duration-300',
                     'border-b-2 border-primary-200 border-opacity-0  ',
                     visible ? 'top-0' : '-top-[5rem]',
                 )}
@@ -71,7 +71,7 @@ export const Header = () => {
                             <a href="/">
                                 <div className="flex">
                                     <div className="rounded-full fill-current p-2">
-                                        <LogoIcon className="h-8 w-8" onClick={null} />
+                                        <LogoIcon className="h-10 w-10" onClick={null} />
                                     </div>
                                     <div className="ml-4 self-center">onivue</div>
                                 </div>
@@ -79,7 +79,7 @@ export const Header = () => {
                         </Link>
                         <div className="flex items-center">
                             <button
-                                className="d-flex h-12 w-12 items-center justify-center rounded-xl ring-primary-200 focus:outline-none focus:ring-2 dark:bg-gray-900"
+                                className="d-flex h-12 w-12 items-center justify-center rounded-full ring-primary-200 focus:outline-none focus:ring-2 dark:bg-gray-900"
                                 onClick={toggleTheme}
                             >
                                 {mounted ? (

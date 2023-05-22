@@ -11,20 +11,12 @@ export default function Home() {
         <>
             <Header />
 
-            <AnimationOnScroll animateIn="animate-fade-in-down" offset={0} animateOnce>
+            <main className="animate-fade-in overflow-y-hidden">
                 <Hero />
-            </AnimationOnScroll>
-            <div className="overflow-y-hidden">
-                <AnimationOnScroll animateIn="animate-fade-in-up" offset={0} animateOnce>
-                    <Projects />
-                </AnimationOnScroll>
-                <AnimationOnScroll animateIn="animate-fade-in-up" animateOnce>
-                    <Skills />
-                </AnimationOnScroll>
-                <AnimationOnScroll animateIn="animate-fade-in-up" offset={0} animateOnce>
-                    <Footer />
-                </AnimationOnScroll>
-            </div>
+                <Projects />
+                <Skills />
+                <Footer />
+            </main>
         </>
     )
 }
