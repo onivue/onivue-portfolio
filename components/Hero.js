@@ -8,14 +8,14 @@ import Image from 'next/image'
 export const Hero = () => {
     return (
         <Container className="h-screen pt-24 md:mb-14 md:h-auto md:pt-32">
-            <div className="grid h-full grid-cols-1 justify-items-center md:grid-cols-2">
-                <div className="mb-10 flex flex-col justify-center">
+            <div className="grid h-full grid-cols-1 grid-rows-1  md:grid-cols-2">
+                <div className="mb-10 flex flex-col justify-end md:justify-center">
                     <div className="flex items-center">
                         <h1 className="mb-1 text-lg font-bold text-black-900 dark:text-white">
                             Hey! I'm Albin
                         </h1>
                     </div>
-                    <h2 className="text-3xl font-bold">I'm a developer</h2>
+                    <h2 className="text-3xl font-bold text-accent">I'm a developer</h2>
                     <div>
                         <span className="text-primary-400 ">make small things important</span> &{' '}
                         <span className="text-primary-400 ">think out of the box</span>.
@@ -34,7 +34,7 @@ export const Hero = () => {
                     </div>
                 </div>
 
-                <div className="relative row-start-1 my-4 flex items-center justify-center md:row-start-auto">
+                <div className="md:row-start relative row-auto row-start-1 my-4 flex items-center justify-center">
                     <svg
                         viewBox="0 0 200 200"
                         xmlns="http://www.w3.org/2000/svg"

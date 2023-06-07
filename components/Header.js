@@ -49,8 +49,6 @@ export const Header = () => {
         // } else {
         //     playOnDark()
         // }
-        console.log(theme)
-
         setTheme(theme === Themes.light ? Themes.dark : Themes.light)
     }, [setTheme, theme /*playOnDark, playOnLight*/])
 
@@ -61,8 +59,8 @@ export const Header = () => {
             <div
                 className={clsx(
                     'fixed z-20 w-full  animate-fade-in opacity-90 backdrop-blur-sm duration-300',
-                    'border-b-2 border-primary-200 border-opacity-0  ',
-                    visible ? 'top-0' : '-top-[5rem]',
+                    'border-b-[0px] border-accent border-opacity-0',
+                    visible ? 'top-0' : '-top-[88px] border-b-[6px] border-opacity-100',
                 )}
             >
                 <Container>
