@@ -7,7 +7,7 @@ import me from '../public/images/me.png'
 import Image from 'next/image'
 export const Hero = () => {
     return (
-        <Container className="h-screen pt-24 md:mb-14 md:h-auto md:pt-32">
+        <Container className="h-[100svh] pt-24 md:mb-14 md:h-auto md:pt-32">
             <div className="grid h-full grid-cols-1 grid-rows-1  md:grid-cols-2">
                 <div className="mb-10 flex flex-col justify-end md:justify-center">
                     <div className="flex items-center">
