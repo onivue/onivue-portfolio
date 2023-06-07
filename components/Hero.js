@@ -17,8 +17,10 @@ export const Hero = () => {
                     </div>
                     <h2 className="text-3xl font-bold text-accent">I'm a developer</h2>
                     <div>
-                        <span className="text-primary-400 ">make small things important</span> &{' '}
-                        <span className="text-primary-400 ">think out of the box</span>.
+                        <span className="text-primary-400 ">
+                            make small things important & think out of the box
+                        </span>
+                        .
                     </div>
                     <div className="mt-6 flex">
                         <MediaIcon
@@ -38,7 +40,7 @@ export const Hero = () => {
                     <svg
                         viewBox="0 0 200 200"
                         xmlns="http://www.w3.org/2000/svg"
-                        className="absolute -z-10 w-64 transform animate-tilt text-primary-200 opacity-50 drop-shadow-xl"
+                        className="absolute -z-10 w-64 transform animate-tilt text-accent/30 opacity-50 drop-shadow-xl"
                     >
                         <path
                             fill="currentColor"
@@ -50,7 +52,7 @@ export const Hero = () => {
                     <svg
                         viewBox="0 0 200 200"
                         xmlns="http://www.w3.org/2000/svg"
-                        className="absolute -z-20 w-64 transform text-primary-100 opacity-60 drop-shadow-xl"
+                        className="absolute -z-20 w-64 transform text-accent/20 opacity-70 drop-shadow-xl"
                     >
                         <path
                             fill="currentColor"
@@ -59,7 +61,7 @@ export const Hero = () => {
                         />
                     </svg>
 
-                    <div className="relative h-40 w-40 rounded-full  ring-4 ring-primary-200">
+                    <div className="relative h-40 w-40 rounded-full ring-4 ring-accent/40">
                         <Image
                             src={me}
                             alt="Picture of the author"
