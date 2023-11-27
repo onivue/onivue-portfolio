@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }) {
                 />
                 <title>onivue-portfolio</title>
             </Head>
-            <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
+            <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
                 <Layout>
                     <Component {...pageProps} />
                 </Layout>
