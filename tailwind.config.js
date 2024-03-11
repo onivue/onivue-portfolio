@@ -8,7 +8,7 @@ module.exports = {
         extend: {
             ...animations,
             fontFamily: {
-                sans: ['Poppins', ...defaultTheme.fontFamily.sans],
+                sans: ['Assistant', ...defaultTheme.fontFamily.sans],
             },
             colors: {
                 accent: '#47f4c8',

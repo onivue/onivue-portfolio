@@ -1,21 +1,19 @@
-import { FaGithub, FaLinkedin, FaTelegram, FaTwitter } from 'react-icons/fa'
-import { MediaIcon } from '@/components/MediaIcon'
 import { Container } from '@/components/Container'
-import { HiExternalLink, HiLockClosed } from 'react-icons/hi'
+import { MediaIcon } from '@/components/MediaIcon'
 
 import {
+    SiFigma,
+    SiFirebase,
+    SiGithub,
+    SiNextdotjs,
+    SiNodedotjs,
+    SiPowershell,
+    SiPrettier,
     SiReact,
     SiTailwindcss,
-    SiFirebase,
-    SiNextdotjs,
-    SiVisualstudiocode,
-    SiPrettier,
-    SiPowershell,
-    SiNodedotjs,
-    SiVercel,
     SiTypescript,
-    SiGithub,
-    SiFigma,
+    SiVercel,
+    SiVisualstudiocode,
 } from 'react-icons/si'
 
 const iconStyle = 'w-16 h-16 text-primary-200'
@@ -111,7 +109,7 @@ export const Skills = () => {
 
 export const ProjectCard = ({ title, text, externalLink, icon }) => {
     return (
-        <div className="flex flex-col items-center justify-center rounded-lg border-2 border-primary-100 p-4 transition duration-200 hover:-translate-y-2 dark:shadow-slate-900">
+        <div className="flex flex-col items-center justify-center rounded-lg border border-primary-100 p-4 transition duration-200 hover:-translate-y-2 dark:shadow-slate-900">
             <h2 className="mb-2 text-lg font-bold">{title}</h2>
             <p>{text}</p>
 

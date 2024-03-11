@@ -1,10 +1,10 @@
-import { FaGithub, FaLinkedin, FaTelegram, FaTwitter } from 'react-icons/fa'
-import { MediaIcon } from '@/components/MediaIcon'
 import { Container } from '@/components/Container'
-import { HiExternalLink, HiLockClosed } from 'react-icons/hi'
+import { MediaIcon } from '@/components/MediaIcon'
 import { useState } from 'react'
-import Modal from './Modal'
+import { FaGithub } from 'react-icons/fa'
+import { HiExternalLink, HiLockClosed } from 'react-icons/hi'
 import { SiFigma } from 'react-icons/si'
+import Modal from './Modal'
 
 export const Projects = () => {
     return (
@@ -118,7 +118,7 @@ export const ProjectCard = ({
 }) => {
     const [modalOpen, setModalOpen] = useState(false)
     return (
-        <div className="border-accent-100 flex flex-col justify-between rounded-lg border-2 p-4  shadow-primary-100/60 transition duration-200 hover:-translate-y-2 dark:shadow-slate-900">
+        <div className="border-accent-100 flex flex-col justify-between rounded-lg border p-4  shadow-primary-100/60 transition duration-200 hover:-translate-y-2 dark:shadow-slate-900">
             <h2 className="mb-2 text-lg font-bold">{title}</h2>
             <p>{text}</p>
 

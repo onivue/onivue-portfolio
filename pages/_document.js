@@ -1,4 +1,4 @@
-import Document, { Html, Head, Main, NextScript } from 'next/document'
+import Document, { Head, Html, Main, NextScript } from 'next/document'
 
 const APP_NAME = 'onivue'
 const APP_DESCRIPTION = 'Portfolio'
@@ -32,10 +32,17 @@ class MyDocument extends Document {
                     />
                     <link rel="shortcut icon" href="/icons/favicon.ico" />
                     <link rel="icon" href="/favicon.ico" />
+                    <link rel="preconnect" href="https://fonts.googleapis.com" />
+                    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
                     <link
-                        href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+                        href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&display=swap"
                         rel="stylesheet"
                     />
+
+                    {/* <link
+                        href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+                        rel="stylesheet"
+                    /> */}
                     {/* <link rel="manifest" href="/manifest.json" /> */}
                 </Head>
 
