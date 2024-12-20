@@ -13,6 +13,11 @@ class MyDocument extends Document {
                     <meta name="description" content={APP_DESCRIPTION} />
                     <meta name="theme-color" content="#f9e288" />
                     <meta charSet="utf-8" />
+                    <script
+                        async
+                        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9179928901468615"
+                        crossorigin="anonymous"
+                    ></script>
                     <link
                         rel="apple-touch-icon"
                         sizes="180x180"
