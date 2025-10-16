@@ -14,7 +14,12 @@ const config: Config = {
                 white: '#ffffff',
             },
             fontFamily: {
-                sans: ['system-ui', '-apple-system', 'sans-serif'],
+                sans: [
+                    'system-ui',
+                    '-apple-system',
+                    'BlinkMacSystemFont',
+                    'sans-serif',
+                ],
                 mono: ['"Courier New"', 'monospace'],
             },
         },

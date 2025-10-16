@@ -20,6 +20,19 @@
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
+  
+  /* Retrobrutalist shadow utilities */
+  .shadow-retro-sm {
+    box-shadow: 4px 4px 0 0 currentColor;
+  }
+  
+  .shadow-retro-md {
+    box-shadow: 6px 6px 0 0 currentColor;
+  }
+  
+  .shadow-retro-lg {
+    box-shadow: 12px 12px 0 0 currentColor;
+  }
 }
 
 /* Scrollbar styling */

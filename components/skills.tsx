@@ -32,8 +32,7 @@ export function Skills() {
                         {skills.map((skill) => (
                             <div
                                 key={skill.name}
-                                className="border-4 border-black bg-white p-6 hover:translate-x-1 hover:translate-y-1 hover:shadow-none dark:border-white dark:bg-black"
-                                style={{ boxShadow: '6px 6px 0 0 currentColor' }}
+                                className="border-4 border-black bg-white p-6 shadow-retro-md hover:translate-x-1 hover:translate-y-1 hover:shadow-none dark:border-white dark:bg-black"
                             >
                                 <div className="space-y-2">
                                     <h3 className="text-xl font-bold uppercase">{skill.name}</h3>

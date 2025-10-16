@@ -28,8 +28,7 @@ export function Hero() {
                                 href="https://github.com/onivue"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="border-4 border-black bg-white p-3 hover:translate-x-1 hover:translate-y-1 hover:shadow-none dark:border-white dark:bg-black"
-                                style={{ boxShadow: '4px 4px 0 0 currentColor' }}
+                                className="border-4 border-black bg-white p-3 shadow-retro-sm hover:translate-x-1 hover:translate-y-1 hover:shadow-none dark:border-white dark:bg-black"
                             >
                                 <Github className="h-6 w-6" />
                             </Link>
@@ -37,8 +36,7 @@ export function Hero() {
                                 href="https://www.linkedin.com/in/albin-hoti-a1991b237"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="border-4 border-black bg-white p-3 hover:translate-x-1 hover:translate-y-1 hover:shadow-none dark:border-white dark:bg-black"
-                                style={{ boxShadow: '4px 4px 0 0 currentColor' }}
+                                className="border-4 border-black bg-white p-3 shadow-retro-sm hover:translate-x-1 hover:translate-y-1 hover:shadow-none dark:border-white dark:bg-black"
                             >
                                 <Linkedin className="h-6 w-6" />
                             </Link>
@@ -46,10 +44,7 @@ export function Hero() {
                     </div>
                     <div className="flex items-center justify-center">
                         <div className="relative">
-                            <div
-                                className="h-64 w-64 border-4 border-black bg-gray-200 dark:border-white dark:bg-gray-800"
-                                style={{ boxShadow: '12px 12px 0 0 currentColor' }}
-                            ></div>
+                            <div className="h-64 w-64 border-4 border-black bg-gray-200 shadow-retro-lg dark:border-white dark:bg-gray-800"></div>
                         </div>
                     </div>
                 </div>
