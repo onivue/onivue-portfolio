@@ -1,8 +1,8 @@
 {
-	"recommendations": [
-		"biomejs.biome",
-		"vitest.explorer",
-		"bradlc.vscode-tailwindcss",
-		"davidanson.vscode-markdownlint"
-	]
+    "recommendations": [
+        "biomejs.biome",
+        "vitest.explorer",
+        "bradlc.vscode-tailwindcss",
+        "davidanson.vscode-markdownlint"
+    ]
 }
