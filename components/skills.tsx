@@ -23,6 +23,9 @@ const skills = [
     { name: 'VS Code', category: 'Tools' },
 ]
 
+const DURATION = 1_600
+const COUNT = 6
+
 export function Skills() {
     const [animatingCards, setAnimatingCards] = useState<Set<number>>(new Set())
 
@@ -30,9 +33,7 @@ export function Skills() {
         const timeouts: NodeJS.Timeout[] = []
 
         const animateCard = (index: number) => {
-            // add card to animating set
             setAnimatingCards((prev) => new Set(prev).add(index))
-
             // remove after animation duration
             const timeout = setTimeout(() => {
                 setAnimatingCards((prev) => {
@@ -40,38 +41,29 @@ export function Skills() {
                     newSet.delete(index)
                     return newSet
                 })
-            }, 1_000)
-
+            }, DURATION)
             timeouts.push(timeout)
         }
 
         const scheduleNextAnimation = () => {
-            // randomly select 1-4 cards
-            const count = Math.floor(Math.random() * 4) + 1 // 1-4 cards
+            const count = Math.floor(Math.random() * COUNT) + 1
             const indices = new Set<number>()
-
             // generate unique random indices
             while (indices.size < count) {
                 const randomIndex = Math.floor(Math.random() * skills.length)
                 indices.add(randomIndex)
             }
-
             // animate selected cards
-            for (const index of indices) {
-                animateCard(index)
-            }
-
+            for (const index of indices) animateCard(index)
             // schedule next animation with random delay
-            const nextDelay = Math.random() * 400 + 200 // 200-600ms
+            const nextDelay = DURATION
             const timeout = setTimeout(scheduleNextAnimation, nextDelay)
             timeouts.push(timeout)
         }
 
-        // start the animation cycle
         scheduleNextAnimation()
 
         return () => {
-            // cleanup all timeouts
             for (const timeout of timeouts) {
                 clearTimeout(timeout)
             }
