@@ -40,7 +40,7 @@ export function Hero() {
                         </div>
                     </div>
                     <div className="flex items-center justify-center">
-                        <div className="relative border-4 border-black  shadow-retro-lg dark:border-white dark:bg-white">
+                        <div className="relative border-4 border-white  shadow-retro-lg dark:border-white dark:bg-white">
                             <Image
                                 src="/images/me-px.png"
                                 alt="Albin Hoti"
