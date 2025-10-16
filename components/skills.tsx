@@ -9,7 +9,7 @@ const skills = [
     { name: 'Next.js', category: 'Framework' },
     { name: 'Astro', category: 'Framework' },
     { name: 'Playwright', category: 'Testing' },
-    { name: 'Tailwind CSS', category: 'Styling' },
+    { name: 'Tailwind', category: 'Styling' },
     { name: 'TypeScript', category: 'Language' },
     { name: 'Node.js', category: 'Runtime' },
     { name: 'Bun.js', category: 'Runtime' },
