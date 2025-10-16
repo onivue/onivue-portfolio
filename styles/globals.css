@@ -3,28 +3,51 @@
 @tailwind utilities;
 
 @layer base {
-    html {
-        -webkit-tap-highlight-color: transparent; /* remove Android highlights taps  */
-    }
-}
-@layer utilities {
-    /* Hide Scrollbar */
-    .no-scrollbar::-webkit-scrollbar {
-        display: none; /* Chrome, Safari and Opera */
-    }
-    .no-scrollbar {
-        -ms-overflow-style: none; /* IE and Edge */
-        scrollbar-width: none; /* Firefox */
-    }
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  body {
+    font-family: system-ui, -apple-system, sans-serif;
+  }
 }
 
-/*  SCROLLBAR */
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+/* Scrollbar styling */
 ::-webkit-scrollbar {
-    @apply w-1 rounded lg:w-2;
+  width: 8px;
 }
+
 ::-webkit-scrollbar-track {
-    /* background: #f1f1f1; */
+  background: #f5f5f5;
 }
+
 ::-webkit-scrollbar-thumb {
-    @apply rounded-lg bg-neutral-300 hover:bg-neutral-400;
+  background: #000000;
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #262626;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #262626;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #ffffff;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #f5f5f5;
 }
