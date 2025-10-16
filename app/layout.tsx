@@ -1,6 +1,6 @@
-import type { Metadata } from 'next'
-import '@/styles/globals.css'
 import { ThemeProvider } from '@/components/theme-provider'
+import '@/styles/globals.css'
+import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
     title: 'Albin Hoti | Developer Portfolio',
@@ -18,6 +18,12 @@ export const metadata: Metadata = {
     ],
     authors: [{ name: 'Albin Hoti' }],
     creator: 'Albin Hoti',
+    applicationName: 'onivue',
+    appleWebApp: {
+        title: 'onivue',
+        capable: true,
+        statusBarStyle: 'default',
+    },
     openGraph: {
         type: 'website',
         locale: 'en_US',

@@ -1,0 +1,27 @@
+{
+	"tailwindCSS.classFunctions": [
+		"cva",
+		"cn"
+	],
+	"prettier.enable": false,
+	"eslint.enable": false,
+	"biome.enabled": true,
+	"[yaml]": {
+		"editor.defaultFormatter": "redhat.vscode-yaml"
+	},
+	"[markdown]": {
+		"editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+	},
+	"[jsonc]": {
+		"editor.defaultFormatter": "vscode.json-language-features"
+	},
+	"[json][javascript][javascriptreact][typescript][typescriptreact][css]": {
+		"editor.defaultFormatter": "biomejs.biome",
+		"editor.codeActionsOnSave": {
+			"source.fixAll.biome": "explicit",
+			"source.organizeImports.biome": "explicit",
+			"source.organizeImports": "never",
+			"quickfix.biome": "explicit",
+		},
+	}
+}

@@ -17,19 +17,23 @@
 ## 🛠️ Tech Stack
 
 ### Core Framework
+
 - **[Next.js 15+](https://nextjs.org)** – React framework with App Router for modern web applications
 - **[React 19](https://react.dev)** – Latest React with enhanced features
 - **[TypeScript](https://www.typescriptlang.org)** – Type-safe JavaScript for better DX
 
 ### Styling
+
 - **[Tailwind CSS v3](https://tailwindcss.com/)** – Utility-first CSS framework
 - **Custom Design System** – Monochromatic brutalist theme
 
 ### Development Tools
+
 - **[Biome](https://biomejs.dev)** – Fast, unified toolchain for linting and formatting
 - **[Lucide React](https://lucide.dev)** – Beautiful, consistent icon set
 
 ### Utilities
+
 - **[next-themes](https://github.com/pacocoursey/next-themes)** – Perfect dark mode in Next.js
 - **[clsx](https://github.com/lukeed/clsx)** & **[tailwind-merge](https://github.com/dcastil/tailwind-merge)** – Utility for constructing className strings
 
@@ -42,17 +46,20 @@
 ### Installation
 
 1. Clone the repository:
+
 ```bash
 git clone https://github.com/onivue/onivue-portfolio.git
 cd onivue-portfolio
 ```
 
 2. Install dependencies:
+
 ```bash
 npm install
 ```
 
 3. Run the development server:
+
 ```bash
 npm run dev
 ```
@@ -99,13 +106,25 @@ This portfolio embraces a **retrobrutalist** design approach:
 - **Minimal Animations** – Subtle hover effects only
 - **No Gradients** – Flat design with sharp edges
 
+## 🎨 Design Resources
+
+### Fonts
+
+- **[Pixelade](https://www.dafont.com/pixelate-2.font)** – Retro pixel font for that authentic brutalist feel
+
+### Icons
+
+- **[Pixel Articons](https://pixelarticons.com/)** – Consistent pixel-perfect icons
+- **[Lucide React](https://lucide.dev)** – Additional modern icons
+
 ## 📝 License
 
 This project is open source and available for educational purposes.
 
 ## 👤 Author
 
-**Albin Hoti**
+### Albin Hoti
+
 - Website: [onivue.ch](https://www.onivue.ch)
 - GitHub: [@onivue](https://github.com/onivue)
 - LinkedIn: [Albin Hoti](https://www.linkedin.com/in/albin-hoti-a1991b237)
