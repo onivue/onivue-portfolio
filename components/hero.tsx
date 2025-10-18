@@ -1,4 +1,3 @@
-import { Github, Linkedin } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Container } from '@/components/container'
@@ -35,7 +34,9 @@ export function Hero() {
                                 rel="noopener noreferrer"
                                 className="border-4 border-black bg-white p-3 shadow-retro-sm hover:translate-x-1 hover:translate-y-1 hover:shadow-none dark:border-white dark:bg-black"
                             >
-                                <Linkedin className="h-6 w-6" />
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24">
+                                    <path fill="currentColor" d="M7 23H5v-2h2zm-2-2H3V11h2zm4 0H7V11h2zm4 0h-2v-8h2zm4-8h-2v-2h2zM7 7H5V5h2zM21 15v2h-2v-2zM19 11v2h-2v-2zM21 13v2h-2v-2zM17 17v2h-2v-2zM17 15v2h-2v-2zM17 19v2h-2v-2zM21 17v2h-2v-2zM21 19v2h-2v-2zM19 21v2h-2v-2zM9 3v2H7V3zM15 11v2h-2v-2zM13 11v2h-2v-2zM15 21v2h-2v-2zM5 3v2H3V3zM7 1v2H5V1zM7 9v2H5V9z"></path>
+                                </svg>
                             </Link>
                         </div>
                     </div>
