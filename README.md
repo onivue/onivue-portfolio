@@ -41,7 +41,7 @@
 
 ### Prerequisites
 
-- Node.js 18+ and npm
+- [Bun](https://bun.sh/) (recommended) or Node.js 18+
 
 ### Installation
 
@@ -55,13 +55,13 @@ cd onivue-portfolio
 2. Install dependencies:
 
 ```bash
-npm install
+bun install
 ```
 
 3. Run the development server:
 
 ```bash
-npm run dev
+bun dev
 ```
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser.
