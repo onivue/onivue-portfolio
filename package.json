@@ -6,7 +6,8 @@
         "start": "next start",
         "lint": "biome check .",
         "lint:fix": "biome check --write .",
-        "format": "biome format --write ."
+        "format": "biome format --write .",
+        "updates": "npx npm-check-updates --interactive --format group"
     },
     "dependencies": {
         "@tailwindcss/postcss": "4.1.18",
