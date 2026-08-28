@@ -1,60 +1,121 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import { Container } from '@/components/container'
+'use client';
+
+import { ArrowUpRight } from 'lucide-react';
+import { motion } from 'motion/react';
+import dynamic from 'next/dynamic';
+import Image from 'next/image';
+import Link from 'next/link';
+
+import { Container } from '@/components/container';
+import { GithubPixel, LinkedinPixel } from '@/components/icons';
+import { usePrefersReducedMotion } from '@/lib/use-media-query';
+
+// The sculpture is the heaviest thing on the page — keep it out of the
+// critical path and off the server.
+const VoxelMark = dynamic(() => import('@/components/voxel-mark'), {
+	ssr: false,
+	loading: () => null,
+});
+
+const LINE_1 = 'Full-stack';
+const LINE_2 = 'developer';
 
 export function Hero() {
-    return (
-        <section className="pt-32">
-            <Container>
-                <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-                    <div className="flex flex-col justify-center space-y-6">
-                        <div className="space-y-2">
-                            <h1 className="text-4xl font-black md:text-6xl">HEY! I'M ALBIN</h1>
-                            <div className="inline-block  bg-black px-4 py-1 dark:border-white dark:bg-white">
-                                <p className="text-2xl uppercase text-white dark:text-black md:text-3xl ">
-                                    DEVELOPER
-                                </p>
-                            </div>
-                        </div>
-                        <p className="max-w-md text-lg font-light uppercase">
-                            Crafting digital experiences with clean code and creative solutions
-                        </p>
-                        <div className="flex gap-4">
-                            <Link
-                                href="https://github.com/onivue"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="border-4 border-black bg-white p-3 shadow-retro-sm hover:translate-x-1 hover:translate-y-1 hover:shadow-none dark:border-white dark:bg-black"
-                            >
-                               <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"> <path fill="currentColor" d="M5 2h4v2H7v2H5V2Zm0 10H3V6h2v6Zm2 2H5v-2h2v2Zm2 2v-2H7v2H3v-2H1v2h2v2h4v4h2v-4h2v-2H9Zm0 0v2H7v-2h2Zm6-12v2H9V4h6Zm4 2h-2V4h-2V2h4v4Zm0 6V6h2v6h-2Zm-2 2v-2h2v2h-2Zm-2 2v-2h2v2h-2Zm0 2h-2v-2h2v2Zm0 0h2v4h-2v-4Z"/> </svg>
-                            </Link>
-                            <Link
-                                href="https://www.linkedin.com/in/albin-hoti-a1991b237"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="border-4 border-black bg-white p-3 shadow-retro-sm hover:translate-x-1 hover:translate-y-1 hover:shadow-none dark:border-white dark:bg-black"
-                            >
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24">
-                                    <path fill="currentColor" d="M7 23H5v-2h2zm-2-2H3V11h2zm4 0H7V11h2zm4 0h-2v-8h2zm4-8h-2v-2h2zM7 7H5V5h2zM21 15v2h-2v-2zM19 11v2h-2v-2zM21 13v2h-2v-2zM17 17v2h-2v-2zM17 15v2h-2v-2zM17 19v2h-2v-2zM21 17v2h-2v-2zM21 19v2h-2v-2zM19 21v2h-2v-2zM9 3v2H7V3zM15 11v2h-2v-2zM13 11v2h-2v-2zM15 21v2h-2v-2zM5 3v2H3V3zM7 1v2H5V1zM7 9v2H5V9z"></path>
-                                </svg>
-                            </Link>
-                        </div>
-                    </div>
-                    <div className="flex items-center justify-center">
-                        <div className="relative border-4 border-white  shadow-retro-lg dark:border-white dark:bg-white">
-                            <Image
-                                src="/images/me-px.png"
-                                alt="Albin Hoti"
-                                width={256}
-                                height={256}
-                                className="h-64 w-64 object-cover grayscale"
-                                priority
-                            />
-                            {/* <div className="absolute inset-0 dot-grid" /> */}
-                        </div>
-                    </div>
-                </div>
-            </Container>
-        </section>
-    )
+	const still = usePrefersReducedMotion();
+	const step = still ? 0 : 1;
+
+	const rise = (delay: number) => ({
+		initial: { opacity: 0, y: 20 },
+		animate: { opacity: 1, y: 0 },
+		transition: { duration: 0.85 * step, delay: delay * step, ease: [0.16, 1, 0.3, 1] as const },
+	});
+
+	return (
+		<section className='relative overflow-hidden pt-28 pb-16 md:pt-36 md:pb-24'>
+			{/* Voxel lattice, fading out toward the edges */}
+			<div
+				className='lattice pointer-events-none absolute inset-0 opacity-[0.4] [mask-image:radial-gradient(ellipse_70%_60%_at_50%_35%,black,transparent)]'
+				aria-hidden
+			/>
+
+			<Container className='relative'>
+				<div className='grid items-center gap-12 lg:grid-cols-[1.05fr_1fr] lg:gap-8'>
+					<div>
+						<motion.div {...rise(0)} className='mb-8 flex items-center gap-3'>
+							<Image
+								src='/images/me-px.png'
+								alt='Albin Hoti'
+								width={80}
+								height={80}
+								className='size-10 rounded-full border border-line object-cover'
+								priority
+							/>
+							<span className='flex items-center gap-2.5 rounded-full border border-line py-1.5 pl-3 pr-4'>
+								<span className='relative flex size-2'>
+									<span className='absolute inline-flex size-full animate-ping rounded-full bg-accent opacity-60' />
+									<span className='relative inline-flex size-2 rounded-full bg-accent' />
+								</span>
+								<span className='eyebrow pt-px'>Open to conversations</span>
+							</span>
+						</motion.div>
+
+						<h1 className='text-display text-[clamp(2.9rem,9vw,5.6rem)]'>
+							<motion.span {...rise(0.08)} className='block'>
+								{LINE_1}
+							</motion.span>
+							<motion.span {...rise(0.16)} className='block text-ink-faint'>
+								{LINE_2}
+							</motion.span>
+						</h1>
+
+						<motion.p {...rise(0.26)} className='mt-7 max-w-md text-lg leading-relaxed text-ink-soft'>
+							I&rsquo;m Albin — I build fast, considered interfaces for the web. Mostly React, Next.js and
+							TypeScript, from first sketch to production.
+						</motion.p>
+
+						<motion.div {...rise(0.34)} className='mt-9 flex flex-wrap items-center gap-3'>
+							<Link
+								href='#contact'
+								className='group inline-flex items-center gap-2 rounded-full bg-ink px-5 py-3 text-sm font-medium text-bg transition-transform duration-300 hover:-translate-y-0.5'
+							>
+								Get in touch
+								<ArrowUpRight className='size-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5' />
+							</Link>
+							<Link
+								href='https://github.com/onivue'
+								target='_blank'
+								rel='noopener noreferrer'
+								className='grid size-11 place-items-center rounded-full border border-line text-ink-soft transition-colors hover:border-ink hover:text-ink'
+								aria-label='GitHub'
+							>
+								<GithubPixel className='size-[18px]' />
+							</Link>
+							<Link
+								href='https://www.linkedin.com/in/albin-hoti-a1991b237'
+								target='_blank'
+								rel='noopener noreferrer'
+								className='grid size-11 place-items-center rounded-full border border-line text-ink-soft transition-colors hover:border-ink hover:text-ink'
+								aria-label='LinkedIn'
+							>
+								<LinkedinPixel className='size-[18px]' />
+							</Link>
+						</motion.div>
+					</div>
+
+					{/* Signature: the mark, extruded */}
+					<motion.div
+						initial={{ opacity: 0 }}
+						animate={{ opacity: 1 }}
+						transition={{ duration: 1.1 * step, delay: 0.15 * step }}
+						className='relative mx-auto aspect-square w-full max-w-[440px]'
+					>
+						<div className='bloom absolute inset-[18%] opacity-20 dark:opacity-30' aria-hidden />
+						<div className='absolute inset-0'>
+							<VoxelMark />
+						</div>
+					</motion.div>
+				</div>
+			</Container>
+		</section>
+	);
 }

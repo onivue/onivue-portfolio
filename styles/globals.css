@@ -1,106 +1,222 @@
-/** biome-ignore-all lint/suspicious/noUnknownAtRules: <> */
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @custom-variant dark (&:is(.dark *));
 
+/* ─────────────────────────────────────────────────────────────
+   Pixelate — the brand's original pixel face.
+   Retained as a *utility* face only: eyebrows and micro-labels,
+   where its blockiness is legible and on-brand.
+   ───────────────────────────────────────────────────────────── */
 @font-face {
-    font-family: "Pixelate";
-    src: url("/pixelate.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+	font-family: 'Pixelate';
+	src: url('/pixelate.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
 }
 
+/* ─────────────────────────────────────────────────────────────
+   Palette — graphite + amber phosphor.
+   Greys are lifted from the onivue logo's own four-step ramp.
+   ───────────────────────────────────────────────────────────── */
 @theme {
-    --color-black: #000000;
-    --color-white: #ffffff;
+	--color-void: #0b0c0e;
+	--color-graphite: #16181c;
+	--color-carbon: #1f2228;
+	--color-slate: #6e7681;
+	--color-mist: #c9cdd3;
+	--color-paper: #f4f5f7;
+	--color-chalk: #ffffff;
 
-    --font-sans: "Pixelate", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-    --font-mono: "Courier New", monospace;
+	--color-amber: #ffb020;
+	--color-ember: #ff6b35;
+
+	--font-display: var(--font-archivo), 'Archivo', system-ui, sans-serif;
+	--font-sans: var(--font-instrument), 'Instrument Sans', system-ui, sans-serif;
+	--font-pixel: 'Pixelate', ui-monospace, monospace;
+
+	--ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+	--ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-/*
-  The default border color has changed to `currentcolor` in Tailwind CSS v4,
-  so we've added these compatibility styles to make sure everything still
-  looks the same as it did with Tailwind CSS v3.
+/* Semantic tokens — flip on theme */
+@theme inline {
+	--color-bg: var(--bg);
+	--color-surface: var(--surface);
+	--color-raised: var(--raised);
+	--color-line: var(--line);
+	--color-ink: var(--ink);
+	--color-ink-soft: var(--ink-soft);
+	--color-ink-faint: var(--ink-faint);
+	--color-accent: var(--accent);
+}
 
-  If we ever want to remove these styles, we need to add an explicit border
-  color utility to any element that depends on these defaults.
-*/
+:root {
+	--bg: #f4f5f7;
+	--surface: #ffffff;
+	--raised: #ffffff;
+	--line: color-mix(in oklab, #0b0c0e 12%, transparent);
+	--ink: #0b0c0e;
+	--ink-soft: #4a515b;
+	--ink-faint: #8b929c;
+	--accent: #c2410c;
+	--glow: color-mix(in oklab, #ff6b35 10%, transparent);
+	--glow-core: #ff8a3d;
+}
+
+.dark {
+	--bg: #0b0c0e;
+	--surface: #16181c;
+	--raised: #1f2228;
+	--line: color-mix(in oklab, #ffffff 12%, transparent);
+	--ink: #f4f5f7;
+	--ink-soft: #c9cdd3;
+	--ink-faint: #6e7681;
+	--accent: #ffb020;
+	--glow: color-mix(in oklab, #ffb020 26%, transparent);
+	--glow-core: #ff8410;
+}
+
 @layer base {
-    *,
-    ::after,
-    ::before,
-    ::backdrop,
-    ::file-selector-button {
-        border-color: var(--color-gray-200, currentcolor);
-    }
+	* {
+		border-color: var(--line);
+	}
+
+	html {
+		-webkit-tap-highlight-color: transparent;
+		scroll-behavior: smooth;
+	}
+
+	body {
+		background-color: var(--bg);
+		color: var(--ink);
+		font-family: var(--font-sans);
+		-webkit-font-smoothing: antialiased;
+		text-rendering: optimizeLegibility;
+		overflow-x: hidden;
+	}
+
+	::selection {
+		background: var(--accent);
+		color: var(--bg);
+	}
+
+	:focus-visible {
+		outline: 2px solid var(--accent);
+		outline-offset: 3px;
+		border-radius: 2px;
+	}
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Utilities
+   ───────────────────────────────────────────────────────────── */
+
+/* Display type: Archivo pushed to its expanded width axis so the
+   letterforms echo the square voxels of the mark. */
+@utility text-display {
+	font-family: var(--font-display);
+	font-variation-settings: 'wdth' 112;
+	font-weight: 700;
+	letter-spacing: -0.035em;
+	line-height: 0.92;
+}
+
+@utility eyebrow {
+	font-family: var(--font-pixel);
+	font-size: 0.625rem;
+	letter-spacing: 0.28em;
+	text-transform: uppercase;
+	color: var(--ink-faint);
 }
 
 @utility no-scrollbar {
-    &::-webkit-scrollbar {
-        display: none;
-    }
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+	&::-webkit-scrollbar {
+		display: none;
+	}
+	-ms-overflow-style: none;
+	scrollbar-width: none;
 }
 
-@utility shadow-retro-sm {
-    /* Retrobrutalist shadow utilities */
-    box-shadow: 4px 4px 0 0 currentColor;
+/* Hairline grid — the voxel lattice, barely there. */
+@utility lattice {
+	background-image:
+		linear-gradient(to right, var(--line) 1px, transparent 1px),
+		linear-gradient(to bottom, var(--line) 1px, transparent 1px);
+	background-size: 64px 64px;
 }
 
-@utility shadow-retro-md {
-    box-shadow: 6px 6px 0 0 currentColor;
+/* Phosphor bloom behind the hero mark. A blurred solid rather than a
+   radial-gradient: across a near-black background a gradient only has a
+   handful of 8-bit steps to work with, and those show up as rings. */
+@utility bloom {
+	background: var(--glow-core);
+	border-radius: 50%;
+	filter: blur(72px);
 }
 
-@utility shadow-retro-lg {
-    box-shadow: 12px 12px 0 0 currentColor;
+/* The page's ambient warmth, sitting low behind the closing sections. */
+@utility glow-field {
+	background: var(--glow-core);
+	border-radius: 50%;
+	filter: blur(110px);
 }
 
-@utility dot-grid {
-    background-image:
-        linear-gradient(90deg, rgba(0, 0, 0, 0.9) 3px, transparent 1px),
-        linear-gradient(rgba(0, 0, 0, 0.9) 3px, transparent 1px);
-    background-size: 8px 8px;
+@keyframes marquee {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(-50%);
+	}
 }
 
-@layer base {
-    html {
-        -webkit-tap-highlight-color: transparent;
-    }
-
-    body {
-        @apply font-sans tracking-widest align-middle;
-    }
+@utility animate-marquee {
+	animation: marquee 42s linear infinite;
 }
 
-/* Scrollbar styling */
+@keyframes rise {
+	from {
+		opacity: 0;
+		transform: translateY(14px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Scrollbar
+   ───────────────────────────────────────────────────────────── */
 ::-webkit-scrollbar {
-    width: 8px;
+	width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #f5f5f5;
+	background: var(--bg);
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #000000;
-    border-radius: 0;
+	background: var(--ink-faint);
+	border: 3px solid var(--bg);
+	border-radius: 999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #262626;
+	background: var(--accent);
 }
 
-.dark ::-webkit-scrollbar-track {
-    background: #262626;
-}
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
 
-.dark ::-webkit-scrollbar-thumb {
-    background: #ffffff;
-}
-
-.dark ::-webkit-scrollbar-thumb:hover {
-    background: #f5f5f5;
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+	}
 }

@@ -1,16 +1,18 @@
-import { Container } from '@/components/container'
-import Logo from '@/components/logo'
+import { Container } from '@/components/container';
+import Logo from '@/components/logo';
 
 export function Footer() {
-    return (
-        <footer className="border-t-4 border-black py-12 dark:border-white">
-            <Container>
-                <div className="flex flex-col items-center justify-center space-y-4">
-                    <p className="text-center uppercase">Designed by Albin Hoti</p>
-                    <p className="text-sm opacity-70">© {new Date().getFullYear()} • ONIVUE</p>
-                    <Logo className="size-10 rounded-md " />
-                </div>
-            </Container>
-        </footer>
-    )
+	return (
+		<footer className='border-t border-line py-10'>
+			<Container>
+				<div className='flex flex-col items-center justify-between gap-5 sm:flex-row'>
+					<div className='flex items-center gap-3'>
+						<Logo className='size-7 rounded-md' />
+						<span className='text-sm text-ink-soft'>Designed &amp; built by Albin Hoti</span>
+					</div>
+					<span className='eyebrow'>&copy; {new Date().getFullYear()} onivue</span>
+				</div>
+			</Container>
+		</footer>
+	);
 }
